@@ -1,3 +1,5 @@
+body, html {scroll-behavior: smooth;}
+
 /* 반응형 대비 최소제한 너비 설정 */
 header, main {min-width: 900px;}
 
@@ -18,13 +20,13 @@ header nav {
 header nav .gnb {}
 header nav .gnb a {
     margin-right: 50px;
-    font-size: 30px;
+    font-size: 1.75rem;
 }
 header nav .gnb a:last-child {margin-right: 0;}
 header nav .gnb a:hover {color:#040eff;}
 
 header nav .sns {}
-header nav .sns span {font-size: 35px; margin-right: 5px;}
+header nav .sns span {font-size: 2.0rem; margin-right: 5px;}
 
 /* home */
 main {}
@@ -42,7 +44,7 @@ main #home .mouse img{
 }
 main #home .domain a {
     position: absolute; left: 1%; bottom:15px;
-    font-size: 30px;
+    font-size: 2.0rem; font-weight: 600;
 }
 @keyframes mouse_move {
     0% {transform: translateY(0);}
@@ -186,7 +188,7 @@ main #project_web1 .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
-    text-align: center;
+    text-align: center; font-size: 1.25rem;
 }
 main #project_web1 .link a:hover {
     filter: brightness(130%) contrast(150%);
@@ -203,4 +205,4 @@ main #project_web1 .project_info p {
     font-size: 1.7rem;
 }
 main #project_web1 .preview {text-align: center;}
-main #project_web1 .preview img {}
+main #project_web1 .preview img {width: 100%;}
