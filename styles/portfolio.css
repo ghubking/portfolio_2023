@@ -1,4 +1,13 @@
-body, html {scroll-behavior: smooth;}
+@font-face {
+    font-family: 'TTWanjudaedunsancheB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/TTWanjudaedunsancheB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+body, html {scroll-behavior: smooth; font-family: 'TTWanjudaedunsancheB';}
+body {
+    
+}
 
 /* 반응형 대비 최소제한 너비 설정 */
 header, main {min-width: 900px;}
@@ -21,19 +30,33 @@ header nav .gnb {}
 header nav .gnb a {
     margin-right: 50px;
     font-size: 1.75rem;
+    transition: all 0.5s;
 }
 header nav .gnb a:last-child {margin-right: 0;}
-header nav .gnb a:hover {color:#040eff;}
+header nav .gnb a:hover {
+    color:#FD790D;
+    transition: all 0.5s;
+}
 
-header nav .sns {}
-header nav .sns span {font-size: 2.0rem; margin-right: 5px;}
+header nav .sns_address {
+    align-items: center;
+    padding-top: 5px;
+}
+header nav .sns_address span {font-size: 1.35rem; margin-right: 5px;}
 
 /* home */
-main {}
+main {
+
+}
 main > * {padding:0 30px;}
-main #home {height:100vh; text-align: center;}
+main #home {
+    height:100vh;
+    background: url(../images/bl2.jpg) no-repeat center;
+    background-size: cover;
+}
 main #home h1 {
-    padding-top: 250px;
+    padding: 200px 0 0 150px;
+
 }
 main #home h1 img {}
 main #home .mouse {
@@ -43,8 +66,14 @@ main #home .mouse img{
     animation:mouse_move 1s linear alternate infinite;
 }
 main #home .domain a {
-    position: absolute; left: 1%; bottom:15px;
-    font-size: 2.0rem; font-weight: 600;
+    position: absolute; left: 1%; bottom:30px;
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #home .domain a:hover {
+    color:#FD790D;
+    transition: all 0.5s;
 }
 @keyframes mouse_move {
     0% {transform: translateY(0);}
@@ -52,7 +81,9 @@ main #home .domain a {
 }
 /* skills */
 main #skills {
-    padding-top: 100px; padding-bottom: 100px;
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding-top: 50px; padding-bottom: 50px;
 
 }
 main #skills h1 {font-size: 2.0rem; font-weight: 700;
@@ -62,13 +93,13 @@ main #skills h1 {font-size: 2.0rem; font-weight: 700;
 main #skills .container {
     
     display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
-    height: 750px;
+    height: 700px;
     align-content: space-between; 
     
 }
 main #skills .container li {
     
-    width: 45%; 
+    width: 48%; 
     /* 아이콘, 글자 옆으로 배치하는 flex */
     display: flex; flex-flow: row nowrap;
     align-items: center;
@@ -82,24 +113,25 @@ main #skills .container li .icon {width: 89px;}
 main #skills .container li .icon img {}
 main #skills .container li .contents {
     width: calc(100% - 89px);
-    font-size: 1.25rem; line-height: 25px;
+    font-size: 1.25rem; line-height: 30px;
     letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 main #skills .skill2 {
     font-size: 2.0rem; font-weight: 700;
     border-bottom: 5px solid#000; padding-bottom: 20px;
-    margin: 10px 0 20px 0;
+    margin: 10px 0 30px 0;
 }
 main #skills .container2 {
     
     display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
-    height: 350px;
+    height: 270px;
     align-content: space-between; 
     
 }
 main #skills .container2 li {
     
-    width: 45%; 
+    width: 48%; 
     /* 아이콘, 글자 옆으로 배치하는 flex */
     display: flex; flex-flow: row nowrap;
     align-items: center;
@@ -115,12 +147,34 @@ main #skills .container2 li .contents {
     width: calc(100% - 89px);
     font-size: 1.25rem; line-height: 25px;
     letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
+main #skills .domain {
+    
+}
+main #skills .domain a {
+    
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+
+}
+main #skills .domain a:hover {
+    color: #FD790D;
+    transition: all 0.5s;
+}
+
+
 /* profile */
-main #profile {}
+main #profile {background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 50px 0 50px 0;
+}
+
 main #profile h1 {
     text-align: center;
+    margin-top: 100px;
 }
 main #profile h1 img {}
 main #profile .profile_container {
@@ -131,10 +185,12 @@ main #profile .profile_container {
     
 
 main #profile .profile_container .profile_left {
-    width: 60%; text-align: center;
+    width: 50%; text-align: center;
 }
-main #profile .profile_container .profile_left .img {
-    
+main #profile .profile_container .profile_left img {
+    width: 300px; height: 300px;
+    background-size: cover;
+    border-radius: 50%;
 }
 main #profile .profile_container .profile_left p {
     
@@ -144,11 +200,13 @@ main #profile .profile_container .profile_left p {
 
 main #profile .profile_container .profile_left .education {
     text-align: left; padding-left: 100px;
-    margin-top: 150px; width: 100%;
+    margin-top: 50px; width: 100%;
+    
 }
 main #profile .profile_container .profile_left .education span {
     font-size: 1.25rem;
-    font-weight: 600; 
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 main #profile .profile_container .profile_left .education dl {
     margin-top: 20px;
@@ -159,21 +217,43 @@ main #profile .profile_container .profile_left .education dl > * {
     border-bottom: 1px dashed#ccc;
 }
 main #profile .profile_container .profile_left .education dl dt {
-    width:300px; font-size: 1.25rem;
-    line-height: 50px;
+    width:300px; font-size: 1.15rem;
+    line-height: 50px; font-weight: 500;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 main #profile .profile_container .profile_left .education dl dd {
-    width:calc(100% - 300px); font-size: 1.25rem;
-    line-height: 50px;
+    width:calc(100% - 300px); font-size: 1.15rem;
+    line-height: 50px; font-weight: 500;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 main #profile .profile_container .profile_right {
-    width: 40%; padding-left: 50px;
+    width: 30%; padding-left: 150px;
 }
-main #profile .profile_container .profile_right img {}
+main #profile .profile_container .profile_right img {
+    height: 100vh;
+}
+
+main #profile .domain {
+    margin: 100px 0 0 50px;
+
+}
+main #profile .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #profile .domain a:hover {
+    color: #FD790D;
+    transition: all 0.5s;
+}
 
 /* project_web1 */
 main #project_web1 {
-    margin-top: 150px;
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 100px 0 50px 0;
 }
 main #project_web1 h1 {
     font-size: 2.875rem; text-align: center;
@@ -189,12 +269,17 @@ main #project_web1 .link a {
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
     text-align: center; font-size: 1.25rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s;
+    overflow: hidden;
 }
 main #project_web1 .link a:hover {
-    filter: brightness(130%) contrast(150%);
+    transform: scale(0.95);
+    transition: all 0.5s;
 }
-main #project_web1 .link a:first-child {
-    background: #d10202; margin-left: 0;
+main #project_web1 .link a:nth-of-type(3) {
+    background-color: #FD790D;
+    
 }
 main #project_web1 .project_info {margin: 20px auto; 
     width: 1040px;
@@ -202,7 +287,301 @@ main #project_web1 .project_info {margin: 20px auto;
 }
 main #project_web1 .project_info p {
     line-height: 50px; text-align: left;
-    font-size: 1.7rem;
+    font-size: 1.5rem; font-weight: 500;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 main #project_web1 .preview {text-align: center;}
-main #project_web1 .preview img {width: 100%;}
+main #project_web1 .preview img {width: 60%;}
+
+main #project_web1 .domain {
+    margin: 100px 0 0 50px;
+}
+main #project_web1 .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #project_web1 .domain a:hover {
+    color: #FD790D;
+    transition: all 0.5s;
+}
+
+/* project_web2 */
+main #project_web2 {
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 100px 0 50px 0;
+}
+main #project_web2 h1 {
+    font-size: 2.875rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+}
+main #project_web2 .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 51px; margin-bottom: 23px;
+}
+main #project_web2 .link a {
+    padding: 20px 30px;
+    background: #222; color:#fff;
+    border-radius: 10px; margin-left: 10px;
+    text-align: center; font-size: 1.25rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+main #project_web2 .link a:hover {
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
+main #project_web2 .link a:nth-of-type(3) {
+    background-color: #FD790D;
+}
+main #project_web2 .project_info {margin: 20px auto; 
+    width: 1040px;
+    text-align: center;
+}
+main #project_web2 .project_info p {
+    line-height: 50px; text-align: left;
+    font-size: 1.5rem; font-weight: 500;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+main #project_web2 .preview {text-align: center;}
+main #project_web2 .preview img {width: 60%;}
+
+main #project_web2 .domain {
+    margin: 100px 0 0 50px;
+}
+main #project_web2 .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #project_web2 .domain a:hover {
+    color: #FD790D;
+    transition: all 0.5s;
+}
+
+/* project_landing1 */
+main #project_landing1 {
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 100px 0 50px 0;
+}
+main #project_landing1 h1 {
+    font-size: 2.875rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+}
+main #project_landing1 .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 51px; margin-bottom: 23px;
+}
+main #project_landing1 .link a {
+    padding: 20px 30px;
+    background: #222; color:#fff;
+    border-radius: 10px; margin-left: 10px;
+    text-align: center; font-size: 1.25rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+main #project_landing1 .link a:hover {
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
+main #project_landing1 .link a:first-child {
+    background-color: #FD790D;
+}
+main #project_landing1 .project_info {
+    margin: 20px auto; 
+    width: 1040px;
+    text-align: center;
+    padding-left: 100px;
+}
+main #project_landing1 .project_info p {
+    line-height: 50px; text-align: left;
+    font-size: 1.5rem; font-weight: 500;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+main #project_landing1 .preview {text-align: center;}
+main #project_landing1 .preview img {width: 60%;}
+main #project_landing1 .domain {
+    margin: 100px 0 0 50px;
+}
+main #project_landing1 .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #project_landing1 .domain a:hover {
+    color: #000;
+    transition: all 0.5s;
+}
+
+/* project_landing2 */
+main #project_landing2 {
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 100px 0 50px 0;
+}
+main #project_landing2 h1 {
+    font-size: 2.875rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+}
+main #project_landing2 .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 51px; margin-bottom: 23px;
+}
+main #project_landing2 .link a {
+    padding: 20px 30px;
+    background: #222; color:#fff;
+    border-radius: 10px; margin-left: 10px;
+    text-align: center; font-size: 1.25rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+main #project_landing2 .link a:hover {
+    transform: scale(0.95);
+    transition: all 0.5s;
+}
+main #project_landing2 .link a:first-child {
+    background-color: #FD790D;
+}
+main #project_landing2 .project_info {
+    margin: 20px auto; 
+    width: 1040px;
+    text-align: center;
+    padding-left: 100px;
+}
+main #project_landing2 .project_info p {
+    line-height: 50px; text-align: left;
+    font-size: 1.5rem; font-weight: 500;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+main #project_landing2 .preview {
+    text-align: center;
+}
+main #project_landing2 .preview img {width: 60%;}
+main #project_landing2 .domain {
+    margin: 100px 0 0 50px;
+}
+main #project_landing2 .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #project_landing2 .domain a:hover {
+    color: #000;
+    transition: all 0.5s;
+}
+
+/* project_design_detail */
+main #project_design_detail {
+    
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 100px 0 50px 0;
+    position: relative;
+}
+main #project_design_detail h1 {
+    font-size: 2.875rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+}
+main #project_design_detail h2 {
+    font-size: 2.875rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+    margin-top: 20px;
+}
+main #project_design_detail .detail_contents {
+    display: flex; flex-flow: row nowrap;
+    width: calc(100% - 650px);
+    margin: 0 auto;
+    padding-top: 50px;
+    z-index: 100;
+}
+main #project_design_detail .detail_contents li {
+    margin-right: 35px;
+    
+}
+main #project_design_detail .detail_contents li:last-child {
+    margin-right: 0;
+}
+main #project_design_detail .detail_contents li .detail1 {
+    
+}
+main #project_design_detail .detail_contents li .detail1 img {
+    height: 60vh;
+}
+main #project_design_detail .detail_contents li .detail2 {}
+main #project_design_detail .detail_contents li .detail2 img {height: 60vh;}
+main #project_design_detail .detail_contents li .detail3 {}
+main #project_design_detail .detail_contents li .detail3 img {height: 60vh;}
+main #project_design_detail .detail_contents li .detail4 {}
+main #project_design_detail .detail_contents li .detail4 img {height: 60vh;}
+
+main #project_design_detail .popup_contents {}
+main #project_design_detail .popup_contents li {
+    background-color: #aaa;
+    width: 100%; text-align: center;
+    margin: 0 auto;
+    
+}
+main #project_design_detail .popup_contents li a {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 200;
+}
+main #project_design_detail .popup_contents li a .popup1 {}
+main #project_design_detail .popup_contents li a .close1 {}
+main #project_design_detail .popup_contents li a .popup2 {}
+main #project_design_detail .popup_contents li a .close2 {}
+main #project_design_detail .popup_contents li a .popup3 {}
+main #project_design_detail .popup_contents li a .close3 {}
+main #project_design_detail .popup_contents li a .popup4 {}
+main #project_design_detail .popup_contents li a .close4 {}
+
+main #project_design_detail .domain {
+    margin: 100px 0 0 50px;
+    
+}
+main #project_design_detail .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #project_design_detail .domain a:hover {
+    color: #000;
+    transition: all 0.5s;
+}
+
+/* project_design_sns */
+main #project_design_sns {}
+main #project_design_sns h1 {}
+main #project_design_sns p {}
+main #project_design_sns .sns_contents {}
+main #project_design_sns .sns_contents li {}
+main #project_design_sns .sns_contents li .sns {}
+main #project_design_sns .sns_contents li .sns img {}
+main #project_design_sns .sns_contents li .popup {}
+main #project_design_sns .sns_contents li .popup img {}
+main #project_design_sns .sns_contents li .popup .close {}
+main #project_design_sns .domain {}
+main #project_design_sns .domain a {}
+
+/* ending */
+main #ending {}
+main #ending p {}
+main #ending h1 {}
+main #ending em {}
+main #ending span {}
+main #ending .bottom {}
+main #ending .bottom .domain {}
+main #ending .bottom .domain a {}
+main #ending .bottom span {}
