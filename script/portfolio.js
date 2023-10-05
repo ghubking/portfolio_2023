@@ -111,27 +111,27 @@ $(window).scroll(function() {
 
 
 // 스크롤 내리면 snb 고정메뉴 불러오기
-const snb = document.querySelector('.snb')
-const skills = document.querySelector('#skills')
-console.log(snb, skills)
-window.addEventListener("scroll", () => {
-    if (window.scrollY > '500') {   // 스크롤Y 위치 값
-    snb.setAttribute("style", "display: flex");
-} else {
-    snb.setAttribute("style", "display: none;");
-}
-});
-const up_btn = document.querySelector('.up_btn')
-const down_btn = document.querySelector('.down_btn')
-console.log(up_btn, down_btn)
-up_btn.addEventListener('click',function(e){
-    e.preventDefault();
-    window.scrollTo(0,0);
-})
-down_btn.addEventListener('click',function(e){
-    e.preventDefault();
-    window.scrollTo(0,document.body.scrollHeight);
-})
+// const snb = document.querySelector('.snb')
+// const profile = document.querySelector('#profile')
+// console.log(snb, profile)
+// window.addEventListener("scroll", () => {
+//     if (window.scrollY > '500') {   // 스크롤Y 위치 값
+//     snb.setAttribute("style", "display: flex");
+// } else {
+//     snb.setAttribute("style", "display: none;");
+// }
+// });
+// const up_btn = document.querySelector('.up_btn')
+// const down_btn = document.querySelector('.down_btn')
+// console.log(up_btn, down_btn)
+// up_btn.addEventListener('click',function(e){
+//     e.preventDefault();
+//     window.scrollTo(0,0);
+// })
+// down_btn.addEventListener('click',function(e){
+//     e.preventDefault();
+//     window.scrollTo(0,document.body.scrollHeight);
+// })
 
 
 // 스크롤시 풀페이지
@@ -144,7 +144,7 @@ mHtml.animate({scrollTop : 0},10);
 $(window).on("wheel", function(e) {
     if(mHtml.is(":animated")) return;
     if(e.originalEvent.deltaY > 0) {
-        if(page == 14) return;
+        if(page == 10) return;
         page++;
     } else if(e.originalEvent.deltaY < 0) {
         if(page == 1) return;

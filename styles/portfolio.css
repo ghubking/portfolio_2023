@@ -94,125 +94,14 @@ main #home .domain a:hover {
     0% {transform: translateY(0);}
     100% {transform: translateY(-50px);}
 }
-/* skills */
-main #skills {
-    height:100vh;
-    background: url(../images/bl2.jpg)no-repeat center;
-    background-size: cover;
-    padding-top: 20px; padding-bottom: 20px;
-    position: relative;
-}
-main #skills h1 {font-size: 1.75rem; font-weight: 700;
-    border-bottom: 5px solid#000; padding-bottom: 10px;
-    margin: 70px 0 10px 0;
-}
-main #skills .container {
-    
-    display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
-    height: 45vh;
-    align-content: space-between; 
-    margin-bottom: 30px;
-}
-main #skills .container li {
-    
-    width: 48%; 
-    /* 아이콘, 글자 옆으로 배치하는 flex */
-    display: flex; flex-flow: row nowrap;
-    align-items: center;
-    margin-bottom: 10px; padding-bottom: 10px;
-    border-bottom: 1px dashed#777;
-
-    
-    
-}
-main #skills .container li .icon {width: 50px;}
-main #skills .container li .icon img {width: 100%;}
-main #skills .container li .contents {
-    width: calc(100% - 50px);
-    font-size: 1rem; line-height: 30px;
-    letter-spacing: -0.02em;
-    font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 20px; font-weight: 600;
-}
-main #skills .skill2 {
-    font-size: 1.75rem; font-weight: 700;
-    border-bottom: 5px solid#000; padding-bottom: 5px;
-    margin: 5px 0 5px 0;
-}
-main #skills .container2 {
-    
-    display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
-    height: 23vh;
-    align-content: space-between; 
-    
-}
-main #skills .container2 li {
-    
-    width: 48%; 
-    /* 아이콘, 글자 옆으로 배치하는 flex */
-    display: flex; flex-flow: row nowrap;
-    align-items: center;
-    margin-bottom: 10px; padding-bottom: 10px;
-    border-bottom: 1px dashed#777;
-
-    
-    
-}
-main #skills .container2 li .icon {width: 50px;}
-main #skills .container2 li .icon img {width: 100%;}
-main #skills .container2 li .contents {
-    width: calc(100% - 50px);
-    font-size: 1rem; line-height: 25px;
-    letter-spacing: -0.02em; font-weight: 600;
-    font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 20px;
-}
-
-main #skills .domain {
-    
-}
-main #skills .domain a {
-    
-    font-size: 1.5rem; font-weight: 500;
-    color: #fff;
-    transition: all 0.5s;
-
-}
-main #skills .domain a:hover {
-    color: #FD790D;
-    transition: all 0.5s;
-}
-
-/* side menu */
-main #skills .snb {display: none;}
-main #skills .snb ul {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    background-color:#fff;
-    border: 1px solid#000;
-    border-radius: 10px;
-    position: absolute;
-    right:0; bottom:10%;
-    z-index: 200;
-    position: fixed;
-    transition: all 1s;
-}
-main #skills .snb ul li {
-    padding:10px 10px;
-}
-main #skills .snb ul li .up_btn {}
-main #skills .snb ul li .up_btn img {}
-main #skills .snb ul li .down_btn {}
-main #skills .snb ul li .down_btn img {}
-
-
 
 /* profile */
-main #profile {background: url(../images/bl2.jpg)no-repeat center;
+main #profile {
+    background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
     padding: 10px 0 10px 0;
     height: 100vh;
+    position: relative;
 }
 
 main #profile h1 {
@@ -295,6 +184,122 @@ main #profile .domain a:hover {
     transition: all 0.5s;
 }
 
+/* side menu */
+/* main #proflie .snb {display: none;}
+main #proflie .snb ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color:#fff;
+    border: 1px solid#000;
+    border-radius: 10px;
+    position: absolute;
+    right:0; bottom:10%;
+    z-index: 200;
+    position: fixed;
+    transition: all 1s;
+}
+main #proflie .snb ul li {
+    padding:10px 10px;
+}
+main #proflie .snb ul li .up_btn {}
+main #proflie .snb ul li .up_btn img {}
+main #proflie .snb ul li .down_btn {}
+main #proflie .snb ul li .down_btn img {}
+ */
+
+/* skills */
+main #skills {
+    height:100vh;
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding-top: 20px; padding-bottom: 20px;
+    
+}
+main #skills h1 {font-size: 1.75rem; font-weight: 700;
+    border-bottom: 5px solid#000; padding-bottom: 10px;
+    margin: 70px 0 10px 0;
+}
+main #skills .container {
+    
+    display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
+    height: 45vh;
+    align-content: space-between; 
+    margin-bottom: 30px;
+}
+main #skills .container li {
+    
+    width: 48%; 
+    /* 아이콘, 글자 옆으로 배치하는 flex */
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 10px; padding-bottom: 10px;
+    border-bottom: 1px dashed#777;
+
+    
+    
+}
+main #skills .container li .icon {width: 50px;}
+main #skills .container li .icon img {width: 100%;}
+main #skills .container li .contents {
+    width: calc(100% - 50px);
+    font-size: 1rem; line-height: 30px;
+    letter-spacing: -0.02em;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 20px; font-weight: 600;
+}
+main #skills .skill2 {
+    font-size: 1.75rem; font-weight: 700;
+    border-bottom: 5px solid#000; padding-bottom: 5px;
+    margin: 5px 0 5px 0;
+}
+main #skills .container2 {
+    
+    display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
+    height: 23vh;
+    align-content: space-between; 
+    
+}
+main #skills .container2 li {
+    
+    width: 48%; 
+    /* 아이콘, 글자 옆으로 배치하는 flex */
+    display: flex; flex-flow: row nowrap;
+    align-items: center;
+    margin-bottom: 10px; padding-bottom: 10px;
+    border-bottom: 1px dashed#777;
+
+    
+    
+}
+main #skills .container2 li .icon {width: 50px;}
+main #skills .container2 li .icon img {width: 100%;}
+main #skills .container2 li .contents {
+    width: calc(100% - 50px);
+    font-size: 1rem; line-height: 25px;
+    letter-spacing: -0.02em; font-weight: 600;
+    font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 20px;
+}
+
+main #skills .domain {
+    
+}
+main #skills .domain a {
+    
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+
+}
+main #skills .domain a:hover {
+    color: #FD790D;
+    transition: all 0.5s;
+}
+
+
+
+
 /* project_web1 */
 main #project_web1 {
     height: 100vh;
@@ -339,6 +344,10 @@ main #project_web1 div .web1_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
+main #project_web1 div .web1_text .link a:nth-of-type(2) {
+    background-color: #410dfd;
+    
+}
 main #project_web1 div .web1_text .link a:nth-of-type(3) {
     background-color: #FD790D;
     
@@ -362,8 +371,12 @@ main #project_web1 div .web1_text .project_info p {
 main #project_web1 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
+    
 }
-main #project_web1 div .preview img {width: 100%;}
+main #project_web1 div .preview img {
+    width: 100%;
+    border-radius: 30px;
+}
 
 main #project_web1 .domain {
     margin: 150px 0 0 50px;
@@ -421,6 +434,10 @@ main #project_web2 div .web2_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
+main #project_web2 div .web2_text .link a:nth-of-type(2) {
+    background-color: #410dfd;
+    
+}
 main #project_web2 div .web2_text .link a:nth-of-type(3) {
     background-color: #FD790D;
     
@@ -445,7 +462,10 @@ main #project_web2 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-main #project_web2 div .preview img {width: 100%;}
+main #project_web2 div .preview img {
+    width: 100%;
+    border-radius: 30px;
+}
 
 main #project_web2 .domain {
     margin: 150px 0 0 50px;
@@ -522,7 +542,10 @@ main #project_landing1 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-main #project_landing1 div .preview img {width: 100%;}
+main #project_landing1 div .preview img {
+    width: 100%;
+    border-radius: 30px;
+}
 main #project_landing1 .domain {
     margin: 200px 0 0 50px;
 }
@@ -599,7 +622,10 @@ main #project_landing2 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-main #project_landing2 div .preview img {width: 100%;}
+main #project_landing2 div .preview img {
+    width: 100%;
+    border-radius: 30px;
+}
 main #project_landing2 .domain {
     margin: 200px 0 0 50px;
 }
@@ -648,7 +674,10 @@ main #project_design_detail .detail_contents li {
 main #project_design_detail .detail_contents li:last-child {
     margin-right: 0;
 }
-main #project_design_detail .detail_contents li .detail1 {width: 20%;}
+main #project_design_detail .detail_contents li .detail1 {
+    width: 20%;
+    
+}
 main #project_design_detail .detail_contents li .detail2 {width: 20%;}
 main #project_design_detail .detail_contents li .detail3 {width: 20%;}
 main #project_design_detail .detail_contents li .detail4 {width: 20%;}
@@ -658,7 +687,7 @@ main #project_design_detail .detail_contents li .detail1:hover img {
 }
 main #project_design_detail .detail_contents li .detail1 img {
     height: 100%; width: 100%;
-    
+    border-radius: 20px;
     transition: all 0.5s;
 }
 main #project_design_detail .detail_contents li .detail2:hover img {
@@ -668,6 +697,7 @@ main #project_design_detail .detail_contents li .detail2:hover img {
 main #project_design_detail .detail_contents li .detail2 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_detail .detail_contents li .detail3:hover img {
     transform: scale(1.02);
@@ -676,6 +706,7 @@ main #project_design_detail .detail_contents li .detail3:hover img {
 main #project_design_detail .detail_contents li .detail3 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_detail .detail_contents li .detail4:hover img {
     transform: scale(1.02);
@@ -684,6 +715,7 @@ main #project_design_detail .detail_contents li .detail4:hover img {
 main #project_design_detail .detail_contents li .detail4 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 
 main #project_design_detail .popup_contents {}
@@ -808,7 +840,7 @@ main #project_design_sns .sns_contents {
 main #project_design_sns .sns_contents li {
     margin-right: 35px;
     overflow: hidden;
-    width: calc(23%);
+    width: 23%;
     height:35vh;
     margin-bottom: 20px;
 }
@@ -818,10 +850,14 @@ main #project_design_sns .sns_contents li:nth-of-type(4),main #project_design_sn
 main #project_design_sns .sns_contents li .sns1:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    
 }
+
 main #project_design_sns .sns_contents li .sns1 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
+    
 }
 main #project_design_sns .sns_contents li .sns2:hover img {
     transform: scale(1.02);
@@ -830,6 +866,7 @@ main #project_design_sns .sns_contents li .sns2:hover img {
 main #project_design_sns .sns_contents li .sns2 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_contents li .sns3:hover img {
     transform: scale(1.02);
@@ -838,6 +875,7 @@ main #project_design_sns .sns_contents li .sns3:hover img {
 main #project_design_sns .sns_contents li .sns3 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_contents li .sns4:hover img {
     transform: scale(1.02);
@@ -846,6 +884,7 @@ main #project_design_sns .sns_contents li .sns4:hover img {
 main #project_design_sns .sns_contents li .sns4 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_contents li .sns5:hover img {
     transform: scale(1.02);
@@ -854,6 +893,7 @@ main #project_design_sns .sns_contents li .sns5:hover img {
 main #project_design_sns .sns_contents li .sns5 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_contents li .sns6:hover img {
     transform: scale(1.02);
@@ -862,6 +902,7 @@ main #project_design_sns .sns_contents li .sns6:hover img {
 main #project_design_sns .sns_contents li .sns6 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_contents li .sns7:hover img {
     transform: scale(1.02);
@@ -870,6 +911,7 @@ main #project_design_sns .sns_contents li .sns7:hover img {
 main #project_design_sns .sns_contents li .sns7 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_contents li .sns8:hover img {
     transform: scale(1.02);
@@ -878,6 +920,7 @@ main #project_design_sns .sns_contents li .sns8:hover img {
 main #project_design_sns .sns_contents li .sns8 img {
     width: 100%;
     transition: all 0.5s;
+    border-radius: 20px;
 }
 main #project_design_sns .sns_popup {}
 main #project_design_sns .sns_popup li {
@@ -1008,7 +1051,7 @@ main #ending {
     height:100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 45px 0 50px 0;
+    padding: 100px 0 50px 0;
 }
 main #ending > p {
     text-align: right;
@@ -1030,7 +1073,7 @@ main #ending > span {
     display: block;
     text-align: center;
     font-size: 3.12rem;
-    margin-top: 100px; margin-bottom: 200px;
+    margin-top: 100px; margin-bottom: 250px;
 }
 main #ending .bottom {
     width: calc(100% - 100px);
