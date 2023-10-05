@@ -785,7 +785,7 @@ main #project_design_sns {
     background-size: cover;
     padding: 70px 0 50px 0;
     position: relative;
-    overflow-y: auto;
+    
 }
 main #project_design_sns h1 {
     font-size: 2.5rem; text-align: center;
