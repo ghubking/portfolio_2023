@@ -4,33 +4,48 @@
     font-weight: 700;
     font-style: normal;
 }
-body, html {scroll-behavior: smooth; font-family: 'TTWanjudaedunsancheB';}
+html {overflow: hidden; min-width: 1920px;}
+body, html {scroll-behavior: smooth; font-family: 'TTWanjudaedunsancheB';
+
+
+
+}
 body {
     
 }
 
-/* 반응형 대비 최소제한 너비 설정 */
-header, main {min-width: 900px;}
+
 
 /* header */
 header {
     
     position:fixed; left:0; top:0;
-    width:100%; z-index: 999;
+    width:100%; z-index: 200;
     padding: 33px 30px 0 30px;
 }
 header nav {
     border-top: 1px solid#000;
     border-bottom: 5px solid#000;
-    padding:15px;
+    padding:10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 header nav .gnb {}
 header nav .gnb a {
     margin-right: 50px;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     transition: all 0.5s;
+}
+header.active {
+    background-color: #000;
+    color:#fff;
+    padding: 10px 30px 0 30px;
+    
+}
+header nav .gnb a.active {
+    color:#fff;
+    font-size: 1.25rem;
 }
 header nav .gnb a:last-child {margin-right: 0;}
 header nav .gnb a:hover {
@@ -42,7 +57,7 @@ header nav .sns_address {
     align-items: center;
     padding-top: 5px;
 }
-header nav .sns_address span {font-size: 1.35rem; margin-right: 5px;}
+header nav .sns_address span {font-size: 1.25rem; margin-right: 5px;}
 
 /* home */
 main {
@@ -81,21 +96,22 @@ main #home .domain a:hover {
 }
 /* skills */
 main #skills {
+    height:100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding-top: 50px; padding-bottom: 50px;
-
+    padding-top: 20px; padding-bottom: 20px;
+    position: relative;
 }
-main #skills h1 {font-size: 2.0rem; font-weight: 700;
-    border-bottom: 5px solid#000; padding-bottom: 20px;
-    margin: 50px 0 30px 0;
+main #skills h1 {font-size: 1.75rem; font-weight: 700;
+    border-bottom: 5px solid#000; padding-bottom: 10px;
+    margin: 70px 0 10px 0;
 }
 main #skills .container {
     
     display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
-    height: 700px;
+    height: 45vh;
     align-content: space-between; 
-    
+    margin-bottom: 30px;
 }
 main #skills .container li {
     
@@ -103,29 +119,30 @@ main #skills .container li {
     /* 아이콘, 글자 옆으로 배치하는 flex */
     display: flex; flex-flow: row nowrap;
     align-items: center;
-    margin-bottom: 30px; padding-bottom: 30px;
+    margin-bottom: 10px; padding-bottom: 10px;
     border-bottom: 1px dashed#777;
 
     
     
 }
-main #skills .container li .icon {width: 89px;}
-main #skills .container li .icon img {}
+main #skills .container li .icon {width: 50px;}
+main #skills .container li .icon img {width: 100%;}
 main #skills .container li .contents {
-    width: calc(100% - 89px);
-    font-size: 1.25rem; line-height: 30px;
+    width: calc(100% - 50px);
+    font-size: 1rem; line-height: 30px;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 20px; font-weight: 600;
 }
 main #skills .skill2 {
-    font-size: 2.0rem; font-weight: 700;
-    border-bottom: 5px solid#000; padding-bottom: 20px;
-    margin: 10px 0 30px 0;
+    font-size: 1.75rem; font-weight: 700;
+    border-bottom: 5px solid#000; padding-bottom: 5px;
+    margin: 5px 0 5px 0;
 }
 main #skills .container2 {
     
     display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
-    height: 270px;
+    height: 23vh;
     align-content: space-between; 
     
 }
@@ -135,19 +152,20 @@ main #skills .container2 li {
     /* 아이콘, 글자 옆으로 배치하는 flex */
     display: flex; flex-flow: row nowrap;
     align-items: center;
-    margin-bottom: 30px; padding-bottom: 30px;
+    margin-bottom: 10px; padding-bottom: 10px;
     border-bottom: 1px dashed#777;
 
     
     
 }
-main #skills .container2 li .icon {width: 89px;}
-main #skills .container2 li .icon img {}
+main #skills .container2 li .icon {width: 50px;}
+main #skills .container2 li .icon img {width: 100%;}
 main #skills .container2 li .contents {
-    width: calc(100% - 89px);
-    font-size: 1.25rem; line-height: 25px;
-    letter-spacing: -0.02em;
+    width: calc(100% - 50px);
+    font-size: 1rem; line-height: 25px;
+    letter-spacing: -0.02em; font-weight: 600;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 20px;
 }
 
 main #skills .domain {
@@ -165,22 +183,49 @@ main #skills .domain a:hover {
     transition: all 0.5s;
 }
 
+/* side menu */
+main #skills .snb {display: none;}
+main #skills .snb ul {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    background-color:#fff;
+    border: 1px solid#000;
+    border-radius: 10px;
+    position: absolute;
+    right:0; bottom:10%;
+    z-index: 200;
+    position: fixed;
+    transition: all 1s;
+}
+main #skills .snb ul li {
+    padding:10px 10px;
+}
+main #skills .snb ul li .up_btn {}
+main #skills .snb ul li .up_btn img {}
+main #skills .snb ul li .down_btn {}
+main #skills .snb ul li .down_btn img {}
+
+
 
 /* profile */
 main #profile {background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 50px 0 50px 0;
+    padding: 10px 0 10px 0;
+    height: 100vh;
 }
 
 main #profile h1 {
     text-align: center;
-    margin-top: 100px;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 50px;
 }
-main #profile h1 img {}
+main #profile h1 img {width: 100%;}
 main #profile .profile_container {
     display: flex; flex-flow: row nowrap;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 20px;
 }
     
 
@@ -188,55 +233,56 @@ main #profile .profile_container .profile_left {
     width: 50%; text-align: center;
 }
 main #profile .profile_container .profile_left img {
-    width: 300px; height: 300px;
+    width: 200px; height: 200px;
     background-size: cover;
     border-radius: 50%;
 }
 main #profile .profile_container .profile_left p {
     
-    font-size: 1.25rem; padding-top: 20px;
-    line-height: 40px; font-weight: 600;
+    font-size: 1rem; padding-top: 10px;
+    line-height: 20px; font-weight: 600;
 }
 
 main #profile .profile_container .profile_left .education {
-    text-align: left; padding-left: 100px;
-    margin-top: 50px; width: 100%;
+    text-align: left; padding-left: 200px;
+    margin-top: 10px; width: 100%;
     
 }
 main #profile .profile_container .profile_left .education span {
-    font-size: 1.25rem;
+    font-size: 1rem;
     font-weight: 500;
     font-family: 'Noto Sans KR', sans-serif;
 }
 main #profile .profile_container .profile_left .education dl {
-    margin-top: 20px;
+    margin-top: 10px;
     display: flex; flex-flow: row wrap;
-    
+    align-items: center;
 }
 main #profile .profile_container .profile_left .education dl > * {
     border-bottom: 1px dashed#ccc;
 }
 main #profile .profile_container .profile_left .education dl dt {
-    width:300px; font-size: 1.15rem;
-    line-height: 50px; font-weight: 500;
+    width:300px; font-size: 1rem;
+    line-height: 35px; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
 }
 main #profile .profile_container .profile_left .education dl dd {
-    width:calc(100% - 300px); font-size: 1.15rem;
-    line-height: 50px; font-weight: 500;
+    width: calc(100% - 370px);
+    font-size: 1rem;
+    line-height: 35px; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
 }
 main #profile .profile_container .profile_right {
-    width: 30%; padding-left: 150px;
+    width: 50%; padding-left: 50px;
 }
 main #profile .profile_container .profile_right img {
-    height: 100vh;
+    height: 70vh;
 }
 
 main #profile .domain {
-    margin: 100px 0 0 50px;
+    margin: 10px 0 0 50px;
 
 }
 main #profile .domain a {
@@ -251,51 +297,76 @@ main #profile .domain a:hover {
 
 /* project_web1 */
 main #project_web1 {
+    height: 100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 100px 0 50px 0;
+    padding: 70px 0 20px 0;
+    
 }
-main #project_web1 h1 {
-    font-size: 2.875rem; text-align: center;
-    letter-spacing: -0.02em; font-weight: 700;
-}
-main #project_web1 .link {
+main #project_web1 div {
+    width: calc(100% - 50px);
+    margin: 0 auto;
     display: flex; flex-flow: row nowrap;
-    justify-content: center;
-    padding-top: 51px; margin-bottom: 23px;
+    justify-content: space-between;
+    align-items: center;
 }
-main #project_web1 .link a {
+main #project_web1 div .web1_text {
+    width: 60%;
+    display: flex; flex-flow: column wrap;
+    align-items: center;
+    margin-left: 50px;
+}
+main #project_web1 div .web1_text h1 {
+    font-size: 2.5rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+    padding-bottom: 40px; padding-top: 100px;
+}
+main #project_web1 div .web1_text .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 20px; margin-bottom: 40px;
+}
+main #project_web1 div .web1_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
-    text-align: center; font-size: 1.25rem;
+    text-align: center; font-size: 1.0rem;
+    font-weight: 600;
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
-    overflow: hidden;
 }
-main #project_web1 .link a:hover {
+main #project_web1 div .web1_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_web1 .link a:nth-of-type(3) {
+main #project_web1 div .web1_text .link a:nth-of-type(3) {
     background-color: #FD790D;
     
 }
-main #project_web1 .project_info {margin: 20px auto; 
-    width: 1040px;
+main #project_web1 div .web1_text .link a:nth-of-type(4) {
+    background-color: #aaa;
+    
+}
+main #project_web1 div .web1_text .project_info {
+    margin: 0 auto; 
+    
     text-align: center;
 }
-main #project_web1 .project_info p {
+main #project_web1 div .web1_text .project_info p {
     line-height: 50px; text-align: left;
-    font-size: 1.5rem; font-weight: 500;
+    font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 0px;
 }
-main #project_web1 .preview {text-align: center;}
-main #project_web1 .preview img {width: 60%;}
+main #project_web1 div .preview {
+    text-align: center;
+    width: 50%; margin-top: 150px;
+}
+main #project_web1 div .preview img {width: 100%;}
 
 main #project_web1 .domain {
-    margin: 100px 0 0 50px;
+    margin: 150px 0 0 50px;
 }
 main #project_web1 .domain a {
     font-size: 1.5rem; font-weight: 500;
@@ -309,50 +380,75 @@ main #project_web1 .domain a:hover {
 
 /* project_web2 */
 main #project_web2 {
+    height: 100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 100px 0 50px 0;
+    padding: 70px 0 20px 0;
 }
-main #project_web2 h1 {
-    font-size: 2.875rem; text-align: center;
-    letter-spacing: -0.02em; font-weight: 700;
-}
-main #project_web2 .link {
+main #project_web2 div {
+    width: calc(100% - 50px);
+    margin: 0 auto;
     display: flex; flex-flow: row nowrap;
-    justify-content: center;
-    padding-top: 51px; margin-bottom: 23px;
+    justify-content: space-between;
+    align-items: center;
 }
-main #project_web2 .link a {
+main #project_web2 div .web2_text {
+    width: 65%;
+    display: flex; flex-flow: column wrap;
+    align-items: center;
+    margin-left: 50px;
+}
+main #project_web2 div .web2_text h1 {
+    font-size: 2.5rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+    padding-bottom: 40px; padding-top: 100px;
+}
+main #project_web2 div .web2_text .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    padding-top: 20px; margin-bottom: 40px;
+}
+main #project_web2 div .web2_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
-    text-align: center; font-size: 1.25rem;
+    text-align: center; font-size: 1.0rem;
+    font-weight: 600;
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
-    overflow: hidden;
 }
-main #project_web2 .link a:hover {
+main #project_web2 div .web2_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_web2 .link a:nth-of-type(3) {
+main #project_web2 div .web2_text .link a:nth-of-type(3) {
     background-color: #FD790D;
+    
 }
-main #project_web2 .project_info {margin: 20px auto; 
-    width: 1040px;
+main #project_web2 div .web2_text .link a:nth-of-type(4) {
+    background-color: #aaa;
+    
+}
+main #project_web2 div .web2_text .project_info {
+    margin: 0 auto; 
+    
     text-align: center;
 }
-main #project_web2 .project_info p {
+main #project_web2 div .web2_text .project_info p {
     line-height: 50px; text-align: left;
-    font-size: 1.5rem; font-weight: 500;
+    font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 0px;
 }
-main #project_web2 .preview {text-align: center;}
-main #project_web2 .preview img {width: 60%;}
+main #project_web2 div .preview {
+    text-align: center;
+    width: 50%; margin-top: 150px;
+}
+main #project_web2 div .preview img {width: 100%;}
 
 main #project_web2 .domain {
-    margin: 100px 0 0 50px;
+    margin: 150px 0 0 50px;
 }
 main #project_web2 .domain a {
     font-size: 1.5rem; font-weight: 500;
@@ -363,54 +459,72 @@ main #project_web2 .domain a:hover {
     color: #FD790D;
     transition: all 0.5s;
 }
-
 /* project_landing1 */
 main #project_landing1 {
+    height: 100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 100px 0 50px 0;
+    padding: 70px 0 20px 0;
 }
-main #project_landing1 h1 {
-    font-size: 2.875rem; text-align: center;
-    letter-spacing: -0.02em; font-weight: 700;
-}
-main #project_landing1 .link {
+main #project_landing1 div {
+    width: calc(100% - 200px);
+    margin: 0 auto;
     display: flex; flex-flow: row nowrap;
-    justify-content: center;
-    padding-top: 51px; margin-bottom: 23px;
+    justify-content: space-between;
+    align-items: center;
 }
-main #project_landing1 .link a {
+main #project_landing1 div .landing1_text {
+    width: 65%;
+    display: flex; flex-flow: column wrap;
+    align-items: flex-start;
+    margin-left: 0px;
+}
+main #project_landing1 div .landing1_text h1 {
+    font-size: 2.5rem; text-align: left;
+    letter-spacing: -0.02em; font-weight: 700;
+    padding: 150px 0 40px 0;
+    margin-left: 120px;
+}
+main #project_landing1 div .landing1_text .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding-top: 20px; margin-bottom: 40px;
+}
+main #project_landing1 div .landing1_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
-    text-align: center; font-size: 1.25rem;
+    text-align: center; font-size: 1.0rem;
+    font-weight: 600;
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
-    overflow: hidden;
 }
-main #project_landing1 .link a:hover {
+main #project_landing1 div .landing1_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_landing1 .link a:first-child {
+main #project_landing1 div .landing1_text .link a:first-child {
     background-color: #FD790D;
 }
-main #project_landing1 .project_info {
-    margin: 20px auto; 
-    width: 1040px;
+main #project_landing1 div .landing1_text .project_info {
+    margin: 0 auto; 
+    
     text-align: center;
-    padding-left: 100px;
 }
-main #project_landing1 .project_info p {
+main #project_landing1 div .landing1_text .project_info p {
     line-height: 50px; text-align: left;
-    font-size: 1.5rem; font-weight: 500;
+    font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 10px;
 }
-main #project_landing1 .preview {text-align: center;}
-main #project_landing1 .preview img {width: 60%;}
+main #project_landing1 div .preview {
+    text-align: center;
+    width: 50%; margin-top: 150px;
+}
+main #project_landing1 div .preview img {width: 100%;}
 main #project_landing1 .domain {
-    margin: 100px 0 0 50px;
+    margin: 200px 0 0 50px;
 }
 main #project_landing1 .domain a {
     font-size: 1.5rem; font-weight: 500;
@@ -424,53 +538,70 @@ main #project_landing1 .domain a:hover {
 
 /* project_landing2 */
 main #project_landing2 {
+    height: 100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 100px 0 50px 0;
+    padding: 70px 0 20px 0;
 }
-main #project_landing2 h1 {
-    font-size: 2.875rem; text-align: center;
-    letter-spacing: -0.02em; font-weight: 700;
-}
-main #project_landing2 .link {
+main #project_landing2 div {
+    width: calc(100% - 200px);
+    margin: 0 auto;
     display: flex; flex-flow: row nowrap;
-    justify-content: center;
-    padding-top: 51px; margin-bottom: 23px;
+    justify-content: space-between;
+    align-items: center;
 }
-main #project_landing2 .link a {
+main #project_landing2 div .landing1_text2 {
+    width: 65%;
+    display: flex; flex-flow: column wrap;
+    align-items: flex-start;
+    margin-left: 0px;
+}
+main #project_landing2 div .landing1_text2 h1 {
+    font-size: 2.5rem; text-align: left;
+    letter-spacing: -0.02em; font-weight: 700;
+    padding: 150px 0 40px 0;
+    margin-left: 120px;
+}
+main #project_landing2 div .landing1_text2 .link {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding-top: 20px; margin-bottom: 40px;
+}
+main #project_landing2 div .landing1_text2 .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
-    text-align: center; font-size: 1.25rem;
+    text-align: center; font-size: 1.0rem;
+    font-weight: 600;
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
-    overflow: hidden;
 }
-main #project_landing2 .link a:hover {
+main #project_landing2 div .landing1_text2 .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_landing2 .link a:first-child {
+main #project_landing2 div .landing1_text2 .link a:first-child {
     background-color: #FD790D;
 }
-main #project_landing2 .project_info {
-    margin: 20px auto; 
-    width: 1040px;
+main #project_landing2 div .landing1_text2 .project_info {
+    margin: 0 auto; 
+    
     text-align: center;
-    padding-left: 100px;
 }
-main #project_landing2 .project_info p {
+main #project_landing2 div .landing1_text2 .project_info p {
     line-height: 50px; text-align: left;
-    font-size: 1.5rem; font-weight: 500;
+    font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
+    margin-left: 10px;
 }
-main #project_landing2 .preview {
+main #project_landing2 div .preview {
     text-align: center;
+    width: 50%; margin-top: 150px;
 }
-main #project_landing2 .preview img {width: 60%;}
+main #project_landing2 div .preview img {width: 100%;}
 main #project_landing2 .domain {
-    margin: 100px 0 0 50px;
+    margin: 200px 0 0 50px;
 }
 main #project_landing2 .domain a {
     font-size: 1.5rem; font-weight: 500;
@@ -481,74 +612,160 @@ main #project_landing2 .domain a:hover {
     color: #000;
     transition: all 0.5s;
 }
-
 /* project_design_detail */
 main #project_design_detail {
     
+    height:100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 100px 0 50px 0;
+    padding: 70px 0 30px 0;
     position: relative;
+    overflow-y: auto;
 }
 main #project_design_detail h1 {
-    font-size: 2.875rem; text-align: center;
+    font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
 }
 main #project_design_detail h2 {
-    font-size: 2.875rem; text-align: center;
+    font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
     margin-top: 20px;
 }
 main #project_design_detail .detail_contents {
     display: flex; flex-flow: row nowrap;
-    width: calc(100% - 650px);
+    width: calc(100% - 450px);
+    
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 20px;
     z-index: 100;
 }
 main #project_design_detail .detail_contents li {
+    margin: 0 auto;
     margin-right: 35px;
-    
+    overflow: hidden;
 }
+
 main #project_design_detail .detail_contents li:last-child {
     margin-right: 0;
 }
-main #project_design_detail .detail_contents li .detail1 {
-    
+main #project_design_detail .detail_contents li .detail1 {width: 20%;}
+main #project_design_detail .detail_contents li .detail2 {width: 20%;}
+main #project_design_detail .detail_contents li .detail3 {width: 20%;}
+main #project_design_detail .detail_contents li .detail4 {width: 20%;}
+main #project_design_detail .detail_contents li .detail1:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
 }
 main #project_design_detail .detail_contents li .detail1 img {
-    height: 60vh;
+    height: 100%; width: 100%;
+    
+    transition: all 0.5s;
 }
-main #project_design_detail .detail_contents li .detail2 {}
-main #project_design_detail .detail_contents li .detail2 img {height: 60vh;}
-main #project_design_detail .detail_contents li .detail3 {}
-main #project_design_detail .detail_contents li .detail3 img {height: 60vh;}
-main #project_design_detail .detail_contents li .detail4 {}
-main #project_design_detail .detail_contents li .detail4 img {height: 60vh;}
+main #project_design_detail .detail_contents li .detail2:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_detail .detail_contents li .detail2 img {
+    height: 100%; width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_detail .detail_contents li .detail3:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_detail .detail_contents li .detail3 img {
+    height: 100%; width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_detail .detail_contents li .detail4:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_detail .detail_contents li .detail4 img {
+    height: 100%; width: 100%;
+    transition: all 0.5s;
+}
 
 main #project_design_detail .popup_contents {}
 main #project_design_detail .popup_contents li {
-    background-color: #aaa;
+    
     width: 100%; text-align: center;
     margin: 0 auto;
     
+    
 }
-main #project_design_detail .popup_contents li a {
+main #project_design_detail .popup_contents li .contents1 {
     position: absolute;
     left:0%; top:0%;
-    z-index: 200;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height:100vh;
+    display: none;
 }
-main #project_design_detail .popup_contents li a .popup1 {}
-main #project_design_detail .popup_contents li a .close1 {}
-main #project_design_detail .popup_contents li a .popup2 {}
-main #project_design_detail .popup_contents li a .close2 {}
-main #project_design_detail .popup_contents li a .popup3 {}
-main #project_design_detail .popup_contents li a .close3 {}
-main #project_design_detail .popup_contents li a .popup4 {}
-main #project_design_detail .popup_contents li a .close4 {}
+main #project_design_detail .popup_contents li .contents1 .popup1 {
+    width: 23%;
+    
+    
+}
+main #project_design_detail .popup_contents li .contents1 .close1 {
+    width: 35px;
+    cursor: pointer;
+    
+}
+main #project_design_detail .popup_contents li .contents2 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height:100vh;
+    display: none;
+}
+main #project_design_detail .popup_contents li .contents2 .popup2 {
+    width: 23%;
+    
+}
+main #project_design_detail .popup_contents li .contents2 .close2 {
+    width: 35px;
+    cursor: pointer;
+    
+}
+main #project_design_detail .popup_contents li .contents3 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height:100vh;
+    display: none;
+}
+main #project_design_detail .popup_contents li .contents3 .popup3 {
+    width: 23%;
+    
+}
+main #project_design_detail .popup_contents li .contents3 .close3 {
+    width: 35px;
+    cursor: pointer;
+    
+}
+main #project_design_detail .popup_contents li .contents4 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height:100vh;
+    display: none;
+}
+main #project_design_detail .popup_contents li .contents4 .popup4 {
+    width: 23%;
+    
+}
+main #project_design_detail .popup_contents li .contents4 .close4 {
+    width: 35px;
+    cursor: pointer;
+    
+}
 
 main #project_design_detail .domain {
-    margin: 100px 0 0 50px;
+    margin: 50px 0 0 50px;
     
 }
 main #project_design_detail .domain a {
@@ -562,26 +779,276 @@ main #project_design_detail .domain a:hover {
 }
 
 /* project_design_sns */
-main #project_design_sns {}
-main #project_design_sns h1 {}
-main #project_design_sns p {}
-main #project_design_sns .sns_contents {}
-main #project_design_sns .sns_contents li {}
-main #project_design_sns .sns_contents li .sns {}
-main #project_design_sns .sns_contents li .sns img {}
-main #project_design_sns .sns_contents li .popup {}
-main #project_design_sns .sns_contents li .popup img {}
-main #project_design_sns .sns_contents li .popup .close {}
-main #project_design_sns .domain {}
-main #project_design_sns .domain a {}
+main #project_design_sns {
+    height:100vh;
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 70px 0 50px 0;
+    position: relative;
+    overflow-y: auto;
+}
+main #project_design_sns h1 {
+    font-size: 2.5rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+}
+main #project_design_sns h2 {
+    font-size: 2.5rem; text-align: center;
+    letter-spacing: -0.02em; font-weight: 700;
+    margin-top: 10px;
+}
+main #project_design_sns .sns_contents {
+    display: flex; flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    padding-top: 20px;
+    z-index: 100;
+}
+main #project_design_sns .sns_contents li {
+    margin-right: 35px;
+    overflow: hidden;
+    width: calc(23%);
+    height:35vh;
+    margin-bottom: 20px;
+}
+main #project_design_sns .sns_contents li:nth-of-type(4),main #project_design_sns .sns_contents li:nth-of-type(8) {
+    margin-right: 0;
+}
+main #project_design_sns .sns_contents li .sns1:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns1 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns2:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns2 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns3:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns3 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns4:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns4 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns5:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns5 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns6:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns6 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns7:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns7 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns8:hover img {
+    transform: scale(1.02);
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_contents li .sns8 img {
+    width: 100%;
+    transition: all 0.5s;
+}
+main #project_design_sns .sns_popup {}
+main #project_design_sns .sns_popup li {
+    width: 100%; text-align: center;
+    margin: 0 auto;
+}
+main #project_design_sns .sns_popup li .sns_popup1 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup1{}
+
+main #project_design_sns .sns_popup li .sns_popup1 .sns_close1 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup2 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup2 img {}
+main #project_design_sns .sns_popup li .sns_popup2 .sns_close2 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup3 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup3 img {}
+main #project_design_sns .sns_popup li .sns_popup3 .sns_close3 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup4 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup4 img {}
+main #project_design_sns .sns_popup li .sns_popup4 .sns_close4 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup5 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup5 img {}
+main #project_design_sns .sns_popup li .sns_popup5 .sns_close5 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup6 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup6 img {}
+main #project_design_sns .sns_popup li .sns_popup6 .sns_close6 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup7 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup7 img {}
+main #project_design_sns .sns_popup li .sns_popup7 .sns_close7 {
+    width: 35px;
+    cursor: pointer;
+}
+main #project_design_sns .sns_popup li .sns_popup8 {
+    position: absolute;
+    left:0%; top:0%;
+    z-index: 300;
+    background-color: #f1f1f1;
+    width: 100%; height: 100vh;
+    display: none;
+}
+main #project_design_sns .sns_popup li .sns_popup8 img {}
+main #project_design_sns .sns_popup li .sns_popup8 .sns_close8 {
+    width: 35px;
+    cursor: pointer;
+}
+
+main #project_design_sns .domain {
+    margin: 10px 0 0 10px;
+}
+main #project_design_sns .domain a {
+    font-size: 1.5rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #project_design_sns .domain a:hover {
+    color: #000;
+    transition: all 0.5s;
+}
 
 /* ending */
-main #ending {}
-main #ending p {}
-main #ending h1 {}
-main #ending em {}
-main #ending span {}
-main #ending .bottom {}
+main #ending {
+    height:100vh;
+    background: url(../images/bl2.jpg)no-repeat center;
+    background-size: cover;
+    padding: 45px 0 50px 0;
+}
+main #ending > p {
+    text-align: right;
+    font-size: 2.18rem;
+    margin-right: 40px;
+    color: #fff;
+}
+main #ending h1 {
+    margin: 100px 0 0 100px;
+    font-size: 6.25rem;
+}
+main #ending em {
+    text-align: right;
+    margin-right: 500px; margin-top: 30px;
+    font-size: 6.25rem;
+    display: block;
+}
+main #ending > span {
+    display: block;
+    text-align: center;
+    font-size: 3.12rem;
+    margin-top: 100px; margin-bottom: 200px;
+}
+main #ending .bottom {
+    width: calc(100% - 100px);
+    margin: 0 auto;
+    display: flex; flex-flow: row nowrap;
+    justify-content: space-between;
+    
+}
 main #ending .bottom .domain {}
-main #ending .bottom .domain a {}
-main #ending .bottom span {}
+main #ending .bottom .domain a {
+    font-size: 2.18rem; font-weight: 500;
+    color: #fff;
+    transition: all 0.5s;
+}
+main #ending .bottom .domain a:hover {
+    color: #000;
+    transition: all 0.5s;
+}
+main #ending .bottom span {
+    font-size: 2.18rem;
+}
