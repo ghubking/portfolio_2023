@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./script/jquery.fullPage.css">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/portfolio.css">
     <link rel="stylesheet" href="./styles/portfolio_responsive.css">
@@ -33,18 +34,27 @@
         </nav>
         
     </header>
-    <main>
-        <section id="home">
+    <main id="wrap">
+        <section id="home" class="section">
             <h1><img src="./images/home.png" alt="회사의 매출과 이익에 관해 끊임없이 고민하는 마케팅기획 퍼블리셔 김윤배 입니다"></h1>
             <p class="mouse"><img src="./images/mouse.png" alt=""></p>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="profile">
+        <section id="profile" class="section">
             <h1><img src="./images/profile_text.png" alt="마케팅기획이 가능한 멀티형 퍼블리셔 입니다!"></h1>
             <div class="profile_container">
                 <div class="profile_left">
-                    <img src="./images/kyb.jpg" alt="">
-                    <p>김윤배 1978.09.25<br>entia78@naver.com</p>
+                    <div class="left_top">
+                        <div class="photo">
+                            <img src="./images/kyb.jpg" alt="">
+                            <p>김윤배 1978.09.25<br>entia78@naver.com</p>
+                        </div>
+                        <div class="keypoint">
+                            <img src="./images/icon_keypoint.png" alt="">
+                            <p>핵심역량</p>
+                            <img src="./images/keypoint.png" alt="" class="pop_keypoint">
+                        </div>
+                    </div>
                     <div class="education">
                         <span>· 기타 교육사항</span>
                         <dl>
@@ -85,7 +95,7 @@
                 </ul>
             </div> -->
         </section>
-        <section id="skills">
+        <section id="skills" class="section">
             <h1>skills 1. Program 언어 및 개발 Tool</h1>
             <ul class="container">
                 <li>
@@ -146,7 +156,7 @@
             </ul>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="project_web1">
+        <section id="project_web1" class="section">
             <div>
                 <div class="preview">
                     <img src="./images/kwandong_mok.jpg" alt="">
@@ -169,7 +179,7 @@
             </div>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="project_web2">
+        <section id="project_web2" class="section">
             <div>
                 <div class="preview">
                     <img src="./images/blackwhite_mok.jpg" alt="">
@@ -192,7 +202,7 @@
             </div>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="project_landing1">
+        <section id="project_landing1" class="section">
             <div>
                 <div class="preview">
                     <img src="./images/soldier_mok.jpg" alt="">
@@ -213,12 +223,12 @@
             </div>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="project_landing2">
+        <section id="project_landing2" class="section">
             <div>
                 <div class="preview">
                     <img src="./images/travel_mok.jpg" alt="">
                 </div>
-                <div class="landing1_text2">
+                <div class="landing2_text2">
                     <h1>랜딩 페이지 { 오지일주 세계여행 }</h1>
                     <div class="link">
                         <a href="http://entia.pe.kr/landing/travel/index.html" target="_blank">최종 프로젝트 결과보기</a>
@@ -234,7 +244,7 @@
             </div>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="project_design_detail">
+        <section id="project_design_detail" class="section">
             <h1>ETC Design</h1>
             <h2>상세페이지</h2>
             <ul class="detail_contents">
@@ -247,42 +257,42 @@
                 <li>
                     <div class="contents1">
                         <img src="./images/detail_ssg.png" alt="" class="popup1">
-                        <img src="./images/close.png" alt="" class="close1">
                     </div>
+                    <img src="./images/close.png" alt="" class="close1">
                 </li>
                 <li>
                     <div class="contents2">
                         <img src="./images/detail_diablo.png" alt="" class="popup2">
-                        <img src="./images/close.png" alt="" class="close2">
                     </div>
+                    <img src="./images/close.png" alt="" class="close2">
                 </li>
                 <li>
                     <div class="contents3">
                         <img src="./images/detail_misaeng.png" alt="" class="popup3">
-                        <img src="./images/close.png" alt="" class="close3">
                     </div>
+                    <img src="./images/close.png" alt="" class="close3">
                 </li>
-                <!-- <li>
+                <li>
                     <div class="contents4">
                         <img src="./images/detail_hair.png" alt="" class="popup4">
-                        <img src="./images/close.png" alt="" class="close4">
                     </div>
-                </li> -->
+                    <img src="./images/close.png" alt="" class="close4">
+                </li>
             </ul>        
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="project_design_sns">
+        <section id="project_design_sns" class="section">
             <h1>ETC Design</h1>
             <h2>SNS 디자인</h2>
             <ul class="sns_contents">
-                <li><a href="#" class="sns1"><img src="./images/small_sns1.png" alt=""></a></li>
-                <li><a href="#" class="sns2"><img src="./images/small_sns2.png" alt=""></a></li>
-                <li><a href="#" class="sns3"><img src="./images/small_sns3.png" alt=""></a></li>
-                <li><a href="#" class="sns4"><img src="./images/small_sns4.png" alt=""></a></li>
-                <li><a href="#" class="sns5"><img src="./images/small_sns5.png" alt=""></a></li>
-                <li><a href="#" class="sns6"><img src="./images/small_sns6.png" alt=""></a></li>
-                <li><a href="#" class="sns7"><img src="./images/small_sns7.png" alt=""></a></li>
-                <li><a href="#" class="sns8"><img src="./images/small_sns8.png" alt=""></a></li>
+                <li><a href="#" class="sns1" onclick="return false"><img src="./images/small_sns1.png" alt=""></a></li>
+                <li><a href="#" class="sns2" onclick="return false"><img src="./images/small_sns2.png" alt=""></a></li>
+                <li><a href="#" class="sns3" onclick="return false"><img src="./images/small_sns3.png" alt=""></a></li>
+                <li><a href="#" class="sns4" onclick="return false"><img src="./images/small_sns4.png" alt=""></a></li>
+                <li><a href="#" class="sns5" onclick="return false"><img src="./images/small_sns5.png" alt=""></a></li>
+                <li><a href="#" class="sns6" onclick="return false"><img src="./images/small_sns6.png" alt=""></a></li>
+                <li><a href="#" class="sns7" onclick="return false"><img src="./images/small_sns7.png" alt=""></a></li>
+                <li><a href="#" class="sns8" onclick="return false"><img src="./images/small_sns8.png" alt=""></a></li>
             </ul>
             <ul class="sns_popup">
                 <li>
@@ -335,11 +345,11 @@
                 </li>
             <p class="domain"><a href="#">entia.pe.kr</a></p>
         </section>
-        <section id="ending">
-            <p>entia78@naver.com</p>
+        <section id="ending" class="section">
+            <h2>entia78@naver.com</h2>
             <h1>초심을 잃지 않는</h1>
             <em>사람이 되겠습니다.</em>
-            <span>Thank you for watching my portfolio !!</span>
+            <span class="thank">Thank you for watching my portfolio !!</span>
             <div class="bottom">
                 <p class="domain"><a href="#">entia.pe.kr</a></p>
                 <span>김윤배 / 010-3632-7089</span>
@@ -347,6 +357,7 @@
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./script/jquery.fullPage.js"></script>
     <script src="./script/portfolio.js"></script>
 </body>
 </html>

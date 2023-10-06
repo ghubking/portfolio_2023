@@ -10,14 +10,12 @@ body, html {scroll-behavior: smooth; font-family: 'TTWanjudaedunsancheB';
 
 
 }
-body {
-    
-}
+body {min-width: 1920px;}
 
 
 
 /* header */
-header {
+header {min-width: 1920px;
     
     position:fixed; left:0; top:0;
     width:100%; z-index: 200;
@@ -60,33 +58,33 @@ header nav .sns_address {
 header nav .sns_address span {font-size: 1.25rem; margin-right: 5px;}
 
 /* home */
-main {
+#wrap {
 
 }
-main > * {padding:0 30px;}
-main #home {
-    height:100vh;
+#wrap > * {padding:0 30px;}
+#wrap #home {
+    height:70vh;
     background: url(../images/bl2.jpg) no-repeat center;
     background-size: cover;
 }
-main #home h1 {
-    padding: 200px 0 0 150px;
+#wrap #home h1 {
+    padding: 20px 0 0 50px;
 
 }
-main #home h1 img {}
-main #home .mouse {
+#wrap #home h1 img {}
+#wrap #home .mouse {
     position: absolute; left: 50%; bottom:50px;
 }
-main #home .mouse img{
+#wrap #home .mouse img{
     animation:mouse_move 1s linear alternate infinite;
 }
-main #home .domain a {
+#wrap #home .domain a {
     position: absolute; left: 1%; bottom:30px;
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #home .domain a:hover {
+#wrap #home .domain a:hover {
     color:#FD790D;
     transition: all 0.5s;
 }
@@ -96,90 +94,123 @@ main #home .domain a:hover {
 }
 
 /* profile */
-main #profile {
+#wrap #profile {
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 10px 0 10px 0;
-    height: 100vh;
+    padding: 20px 0 0px 0;
+    height: 90vh;
     position: relative;
 }
 
-main #profile h1 {
+#wrap #profile h1 {
     text-align: center;
     width: 30%;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 30px;
 }
-main #profile h1 img {width: 100%;}
-main #profile .profile_container {
+#wrap #profile h1 img {width: 100%;}
+#wrap #profile .profile_container {
     display: flex; flex-flow: row nowrap;
     justify-content: center;
     padding-top: 20px;
 }
     
 
-main #profile .profile_container .profile_left {
+#wrap #profile .profile_container .profile_left {
     width: 50%; text-align: center;
 }
-main #profile .profile_container .profile_left img {
+#wrap #profile .profile_container .profile_left .left_top {
+    display: flex; flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+#wrap #profile .profile_container .profile_left .left_top .photo {}
+#wrap #profile .profile_container .profile_left .left_top .photo img {
     width: 200px; height: 200px;
     background-size: cover;
     border-radius: 50%;
+    margin-right: 100px;
 }
-main #profile .profile_container .profile_left p {
-    
+#wrap #profile .profile_container .profile_left .left_top .photo p {
     font-size: 1rem; padding-top: 10px;
     line-height: 20px; font-weight: 600;
+    text-align: left;
+    margin-left: 30px;
 }
-
-main #profile .profile_container .profile_left .education {
+#wrap #profile .profile_container .profile_left .left_top .keypoint {
+    cursor: pointer;
+    
+}
+main #profile .profile_container .profile_left .left_top .keypoint:hover img {
+    transform: scale(0.98);
+    transition: all 0.5s;
+}
+#wrap #profile .profile_container .profile_left .left_top .keypoint img {
+    width: 100px; height:100px;
+    transition: all 0.5s;
+}
+#wrap #profile .profile_container .profile_left .left_top .keypoint p {
+    transition: all 0.5s;
+}
+main #profile .profile_container .profile_left .left_top .keypoint:hover p {
+    color:#FD790D;
+    transition: all 0.5s;
+}
+#wrap #profile .profile_container .profile_left .left_top .keypoint .pop_keypoint {
+    position: absolute; 
+    left:4.5%; top:6%;
+    width: 90%; height:90%;
+    z-index: 300;
+    display: none;
+}
+#wrap #profile .profile_container .profile_left .education {
     text-align: left; padding-left: 200px;
     margin-top: 10px; width: 100%;
     
 }
-main #profile .profile_container .profile_left .education span {
+#wrap #profile .profile_container .profile_left .education span {
     font-size: 1rem;
     font-weight: 500;
     font-family: 'Noto Sans KR', sans-serif;
 }
-main #profile .profile_container .profile_left .education dl {
+#wrap #profile .profile_container .profile_left .education dl {
     margin-top: 10px;
     display: flex; flex-flow: row wrap;
     align-items: center;
 }
-main #profile .profile_container .profile_left .education dl > * {
+#wrap #profile .profile_container .profile_left .education dl > * {
     border-bottom: 1px dashed#ccc;
 }
-main #profile .profile_container .profile_left .education dl dt {
+#wrap #profile .profile_container .profile_left .education dl dt {
     width:300px; font-size: 1rem;
     line-height: 35px; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
 }
-main #profile .profile_container .profile_left .education dl dd {
+#wrap #profile .profile_container .profile_left .education dl dd {
     width: calc(100% - 370px);
     font-size: 1rem;
     line-height: 35px; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
 }
-main #profile .profile_container .profile_right {
+#wrap #profile .profile_container .profile_right {
     width: 50%; padding-left: 50px;
 }
-main #profile .profile_container .profile_right img {
+#wrap #profile .profile_container .profile_right img {
     height: 70vh;
 }
 
-main #profile .domain {
+#wrap #profile .domain {
     margin: 10px 0 0 50px;
 
 }
-main #profile .domain a {
+#wrap #profile .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #profile .domain a:hover {
+#wrap #profile .domain a:hover {
     color: #FD790D;
     transition: all 0.5s;
 }
@@ -209,25 +240,25 @@ main #proflie .snb ul li .down_btn img {}
  */
 
 /* skills */
-main #skills {
-    height:100vh;
+#wrap #skills {
+    height:90vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding-top: 20px; padding-bottom: 20px;
+    padding-top: 0px; padding-bottom: 20px;
     
 }
-main #skills h1 {font-size: 1.75rem; font-weight: 700;
+#wrap #skills h1 {font-size: 1.75rem; font-weight: 700;
     border-bottom: 5px solid#000; padding-bottom: 10px;
-    margin: 70px 0 10px 0;
+    margin: 50px 0 10px 0;
 }
-main #skills .container {
+#wrap #skills .container {
     
     display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
     height: 45vh;
     align-content: space-between; 
     margin-bottom: 30px;
 }
-main #skills .container li {
+#wrap #skills .container li {
     
     width: 48%; 
     /* 아이콘, 글자 옆으로 배치하는 flex */
@@ -239,28 +270,28 @@ main #skills .container li {
     
     
 }
-main #skills .container li .icon {width: 50px;}
-main #skills .container li .icon img {width: 100%;}
-main #skills .container li .contents {
+#wrap #skills .container li .icon {width: 50px;}
+#wrap #skills .container li .icon img {width: 100%;}
+#wrap #skills .container li .contents {
     width: calc(100% - 50px);
     font-size: 1rem; line-height: 30px;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 20px; font-weight: 600;
 }
-main #skills .skill2 {
+#wrap #skills .skill2 {
     font-size: 1.75rem; font-weight: 700;
     border-bottom: 5px solid#000; padding-bottom: 5px;
     margin: 5px 0 5px 0;
 }
-main #skills .container2 {
+#wrap #skills .container2 {
     
     display: flex; flex-flow: column wrap; /* 스킬 9개 수직 줄바꿈으로 배치하는 플렉스 */
     height: 23vh;
     align-content: space-between; 
     
 }
-main #skills .container2 li {
+#wrap #skills .container2 li {
     
     width: 48%; 
     /* 아이콘, 글자 옆으로 배치하는 flex */
@@ -272,9 +303,9 @@ main #skills .container2 li {
     
     
 }
-main #skills .container2 li .icon {width: 50px;}
-main #skills .container2 li .icon img {width: 100%;}
-main #skills .container2 li .contents {
+#wrap #skills .container2 li .icon {width: 50px;}
+#wrap #skills .container2 li .icon img {width: 100%;}
+#wrap #skills .container2 li .contents {
     width: calc(100% - 50px);
     font-size: 1rem; line-height: 25px;
     letter-spacing: -0.02em; font-weight: 600;
@@ -282,17 +313,17 @@ main #skills .container2 li .contents {
     margin-left: 20px;
 }
 
-main #skills .domain {
+#wrap #skills .domain {
     
 }
-main #skills .domain a {
+#wrap #skills .domain a {
     
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 
 }
-main #skills .domain a:hover {
+#wrap #skills .domain a:hover {
     color: #FD790D;
     transition: all 0.5s;
 }
@@ -301,37 +332,40 @@ main #skills .domain a:hover {
 
 
 /* project_web1 */
-main #project_web1 {
-    height: 100vh;
+#wrap #project_web1 {
+    height: 90vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 70px 0 20px 0;
-    
+    padding: 20px 0 20px 0;
+    position: relative;
 }
-main #project_web1 div {
+#wrap #project_web1 div {
     width: calc(100% - 50px);
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
-main #project_web1 div .web1_text {
+#wrap #project_web1 div .web1_text {
     width: 60%;
     display: flex; flex-flow: column wrap;
     align-items: center;
     margin-left: 50px;
 }
-main #project_web1 div .web1_text h1 {
+#wrap #project_web1 div .web1_text h1 {
     font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
-    padding-bottom: 40px; padding-top: 100px;
+    padding-bottom: 10px; padding-top: 150px;
+    margin-bottom: 10px;
 }
-main #project_web1 div .web1_text .link {
+#wrap #project_web1 div .web1_text .link {
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
-    padding-top: 20px; margin-bottom: 40px;
+    padding-top: 10px; margin-bottom: 10px;
 }
-main #project_web1 div .web1_text .link a {
+#wrap #project_web1 div .web1_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
@@ -340,88 +374,94 @@ main #project_web1 div .web1_text .link a {
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
 }
-main #project_web1 div .web1_text .link a:hover {
+#wrap #project_web1 div .web1_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_web1 div .web1_text .link a:nth-of-type(2) {
+#wrap #project_web1 div .web1_text .link a:nth-of-type(2) {
     background-color: #410dfd;
     
 }
-main #project_web1 div .web1_text .link a:nth-of-type(3) {
+#wrap #project_web1 div .web1_text .link a:nth-of-type(3) {
     background-color: #FD790D;
     
 }
-main #project_web1 div .web1_text .link a:nth-of-type(4) {
+#wrap #project_web1 div .web1_text .link a:nth-of-type(4) {
     background-color: #aaa;
     
 }
-main #project_web1 div .web1_text .project_info {
+#wrap #project_web1 div .web1_text .project_info {
     margin: 0 auto; 
     
     text-align: center;
 }
-main #project_web1 div .web1_text .project_info p {
+#wrap #project_web1 div .web1_text .project_info p {
     line-height: 50px; text-align: left;
     font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 0px;
 }
-main #project_web1 div .preview {
+#wrap #project_web1 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
     
 }
-main #project_web1 div .preview img {
+#wrap #project_web1 div .preview img {
     width: 100%;
     border-radius: 30px;
 }
 
-main #project_web1 .domain {
-    margin: 150px 0 0 50px;
+#wrap #project_web1 .domain {
+    margin: 200px 0 0 50px;
+    position: absolute;
+    left: 0; bottom:10%;
 }
-main #project_web1 .domain a {
+#wrap #project_web1 .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #project_web1 .domain a:hover {
+#wrap #project_web1 .domain a:hover {
     color: #FD790D;
     transition: all 0.5s;
 }
 
 /* project_web2 */
-main #project_web2 {
+#wrap #project_web2 {
     height: 100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 70px 0 20px 0;
+    padding: 20px 0 20px 0;
+    position: relative;
 }
-main #project_web2 div {
+#wrap #project_web2 div {
     width: calc(100% - 50px);
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
-main #project_web2 div .web2_text {
-    width: 65%;
+#wrap #project_web2 div .web2_text {
+    width: 60%;
     display: flex; flex-flow: column wrap;
     align-items: center;
     margin-left: 50px;
 }
-main #project_web2 div .web2_text h1 {
+#wrap #project_web2 div .web2_text h1 {
     font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
-    padding-bottom: 40px; padding-top: 100px;
+    padding-bottom: 10px; padding-top: 150px;
+    margin-bottom: 10px;
 }
-main #project_web2 div .web2_text .link {
+#wrap #project_web2 div .web2_text .link {
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
-    padding-top: 20px; margin-bottom: 40px;
+    padding-top: 10px; margin-bottom: 10px;
 }
-main #project_web2 div .web2_text .link a {
+#wrap #project_web2 div .web2_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
@@ -430,87 +470,98 @@ main #project_web2 div .web2_text .link a {
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
 }
-main #project_web2 div .web2_text .link a:hover {
+#wrap #project_web2 div .web2_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_web2 div .web2_text .link a:nth-of-type(2) {
+#wrap #project_web2 div .web2_text .link a:nth-of-type(2) {
     background-color: #410dfd;
     
 }
-main #project_web2 div .web2_text .link a:nth-of-type(3) {
+#wrap #project_web2 div .web2_text .link a:nth-of-type(3) {
     background-color: #FD790D;
     
 }
-main #project_web2 div .web2_text .link a:nth-of-type(4) {
+#wrap #project_web2 div .web2_text .link a:nth-of-type(4) {
     background-color: #aaa;
     
 }
-main #project_web2 div .web2_text .project_info {
+#wrap #project_web2 div .web2_text .project_info {
     margin: 0 auto; 
     
     text-align: center;
 }
-main #project_web2 div .web2_text .project_info p {
+#wrap #project_web2 div .web2_text .project_info p {
     line-height: 50px; text-align: left;
     font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 0px;
 }
-main #project_web2 div .preview {
+#wrap #project_web2 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
+    
 }
-main #project_web2 div .preview img {
+#wrap #project_web2 div .preview img {
     width: 100%;
     border-radius: 30px;
 }
 
-main #project_web2 .domain {
-    margin: 150px 0 0 50px;
+#wrap #project_web2 .domain {
+    margin: 200px 0 0 50px;
+    position: absolute;
+    left: 0; bottom:10%;
 }
-main #project_web2 .domain a {
+#wrap #project_web2 .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #project_web2 .domain a:hover {
+#wrap #project_web2 .domain a:hover {
     color: #FD790D;
     transition: all 0.5s;
 }
+
+
 /* project_landing1 */
-main #project_landing1 {
+#wrap #project_landing1 {
+    width: 100%;
     height: 100vh;
+    margin: 0 auto;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 70px 0 20px 0;
+    padding: 20px 0 20px 0;
+    position: relative;
 }
-main #project_landing1 div {
-    width: calc(100% - 200px);
+#wrap #project_landing1 div {
+    
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 70px;
+    margin-left: 30px;
 }
-main #project_landing1 div .landing1_text {
+#wrap #project_landing1 div .landing1_text {
     width: 65%;
     display: flex; flex-flow: column wrap;
     align-items: flex-start;
     margin-left: 0px;
 }
-main #project_landing1 div .landing1_text h1 {
+#wrap #project_landing1 div .landing1_text h1 {
     font-size: 2.5rem; text-align: left;
     letter-spacing: -0.02em; font-weight: 700;
-    padding: 150px 0 40px 0;
-    margin-left: 120px;
+    padding: 150px 0 10px 0;
+    margin-left: 40px;
 }
-main #project_landing1 div .landing1_text .link {
+#wrap #project_landing1 div .landing1_text .link {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-start;
-    padding-top: 20px; margin-bottom: 40px;
+    padding-top: 20px; margin-bottom: 20px;
 }
-main #project_landing1 div .landing1_text .link a {
+#wrap #project_landing1 div .landing1_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
@@ -519,78 +570,86 @@ main #project_landing1 div .landing1_text .link a {
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
 }
-main #project_landing1 div .landing1_text .link a:hover {
+#wrap #project_landing1 div .landing1_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_landing1 div .landing1_text .link a:first-child {
+#wrap #project_landing1 div .landing1_text .link a:first-child {
     background-color: #FD790D;
 }
-main #project_landing1 div .landing1_text .project_info {
-    margin: 0 auto; 
+#wrap #project_landing1 div .landing1_text .project_info {
+    /* margin: 0 auto;  */
     
-    text-align: center;
+    text-align: left;
 }
-main #project_landing1 div .landing1_text .project_info p {
+#wrap #project_landing1 div .landing1_text .project_info p {
     line-height: 50px; text-align: left;
     font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 10px;
 }
-main #project_landing1 div .preview {
+#wrap #project_landing1 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-main #project_landing1 div .preview img {
+#wrap #project_landing1 div .preview img {
     width: 100%;
     border-radius: 30px;
 }
-main #project_landing1 .domain {
-    margin: 200px 0 0 50px;
+#wrap #project_landing1 .domain {
+    
+    position: absolute;
+    left: 2%; bottom:15%;
 }
-main #project_landing1 .domain a {
+#wrap #project_landing1 .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #project_landing1 .domain a:hover {
+#wrap #project_landing1 .domain a:hover {
     color: #000;
     transition: all 0.5s;
 }
 
 /* project_landing2 */
-main #project_landing2 {
+#wrap #project_landing2 {
+    width: 100%;
     height: 100vh;
+    margin: 0 auto;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 70px 0 20px 0;
+    padding: 20px 0 20px 0;
+    position: relative;
 }
-main #project_landing2 div {
-    width: calc(100% - 200px);
+#wrap #project_landing2 div {
+    
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 30px;
+    margin-bottom: 70px;
+    margin-left: 30px;
 }
-main #project_landing2 div .landing1_text2 {
+#wrap #project_landing2 div .landing2_text2 {
     width: 65%;
     display: flex; flex-flow: column wrap;
     align-items: flex-start;
     margin-left: 0px;
 }
-main #project_landing2 div .landing1_text2 h1 {
+#wrap #project_landing2 div .landing2_text2 h1 {
     font-size: 2.5rem; text-align: left;
     letter-spacing: -0.02em; font-weight: 700;
-    padding: 150px 0 40px 0;
-    margin-left: 120px;
+    padding: 150px 0 10px 0;
+    margin-left: 40px;
 }
-main #project_landing2 div .landing1_text2 .link {
+#wrap #project_landing2 div .landing2_text2 .link {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-start;
-    padding-top: 20px; margin-bottom: 40px;
+    padding-top: 20px; margin-bottom: 20px;
 }
-main #project_landing2 div .landing1_text2 .link a {
+#wrap #project_landing2 div .landing2_text2 .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
@@ -599,335 +658,382 @@ main #project_landing2 div .landing1_text2 .link a {
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
 }
-main #project_landing2 div .landing1_text2 .link a:hover {
+#wrap #project_landing2 div .landing2_text2 .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-main #project_landing2 div .landing1_text2 .link a:first-child {
+#wrap #project_landing2 div .landing2_text2 .link a:first-child {
     background-color: #FD790D;
 }
-main #project_landing2 div .landing1_text2 .project_info {
-    margin: 0 auto; 
+#wrap #project_landing2 div .landing2_text2 .project_info {
+    /* margin: 0 auto;  */
     
-    text-align: center;
+    text-align: left;
 }
-main #project_landing2 div .landing1_text2 .project_info p {
+#wrap #project_landing2 div .landing2_text2 .project_info p {
     line-height: 50px; text-align: left;
     font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 10px;
 }
-main #project_landing2 div .preview {
+#wrap #project_landing2 div .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-main #project_landing2 div .preview img {
+#wrap #project_landing2 div .preview img {
     width: 100%;
     border-radius: 30px;
 }
-main #project_landing2 .domain {
-    margin: 200px 0 0 50px;
+#wrap #project_landing2 .domain {
+    
+    position: absolute;
+    left: 2%; bottom:15%;
 }
-main #project_landing2 .domain a {
+#wrap #project_landing2 .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #project_landing2 .domain a:hover {
+#wrap #project_landing2 .domain a:hover {
     color: #000;
     transition: all 0.5s;
 }
+
+
 /* project_design_detail */
-main #project_design_detail {
+#wrap #project_design_detail {
     
     height:100vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 70px 0 30px 0;
+    padding: 30px 0 30px 0;
     position: relative;
     overflow-y: auto;
 }
-main #project_design_detail h1 {
+#wrap #project_design_detail h1 {
     font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
 }
-main #project_design_detail h2 {
+#wrap #project_design_detail h2 {
     font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
     margin-top: 20px;
 }
-main #project_design_detail .detail_contents {
+#wrap #project_design_detail .detail_contents {
     display: flex; flex-flow: row nowrap;
     width: calc(100% - 450px);
     
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 30px;
     z-index: 100;
+    position: relative;
 }
-main #project_design_detail .detail_contents li {
+#wrap #project_design_detail .detail_contents li {
     margin: 0 auto;
     margin-right: 35px;
     overflow: hidden;
+    
 }
 
-main #project_design_detail .detail_contents li:last-child {
+#wrap #project_design_detail .detail_contents li:last-child {
     margin-right: 0;
 }
-main #project_design_detail .detail_contents li .detail1 {
+#wrap #project_design_detail .detail_contents li .detail1 {
     width: 20%;
     
 }
-main #project_design_detail .detail_contents li .detail2 {width: 20%;}
-main #project_design_detail .detail_contents li .detail3 {width: 20%;}
-main #project_design_detail .detail_contents li .detail4 {width: 20%;}
-main #project_design_detail .detail_contents li .detail1:hover img {
+#wrap #project_design_detail .detail_contents li .detail2 {width: 20%;}
+#wrap #project_design_detail .detail_contents li .detail3 {width: 20%;}
+#wrap #project_design_detail .detail_contents li .detail4 {width: 20%;}
+#wrap #project_design_detail .detail_contents li .detail1:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
 }
-main #project_design_detail .detail_contents li .detail1 img {
+#wrap #project_design_detail .detail_contents li .detail1 img {
     height: 100%; width: 100%;
     border-radius: 20px;
     transition: all 0.5s;
 }
-main #project_design_detail .detail_contents li .detail2:hover img {
+#wrap #project_design_detail .detail_contents li .detail2:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
 }
-main #project_design_detail .detail_contents li .detail2 img {
+#wrap #project_design_detail .detail_contents li .detail2 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
 }
-main #project_design_detail .detail_contents li .detail3:hover img {
+#wrap #project_design_detail .detail_contents li .detail3:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
 }
-main #project_design_detail .detail_contents li .detail3 img {
+#wrap #project_design_detail .detail_contents li .detail3 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
 }
-main #project_design_detail .detail_contents li .detail4:hover img {
+#wrap #project_design_detail .detail_contents li .detail4:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
 }
-main #project_design_detail .detail_contents li .detail4 img {
+#wrap #project_design_detail .detail_contents li .detail4 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
 }
 
-main #project_design_detail .popup_contents {}
-main #project_design_detail .popup_contents li {
+#wrap #project_design_detail .popup_contents {}
+#wrap #project_design_detail .popup_contents li {
     
     width: 100%; text-align: center;
     margin: 0 auto;
     
-    
 }
-main #project_design_detail .popup_contents li .contents1 {
+#wrap #project_design_detail .popup_contents li .contents1 {
     position: absolute;
-    left:0%; top:0%;
+    left:25%; top:15%;
     z-index: 300;
-    background-color: #f1f1f1;
-    width: 100%; height:100vh;
+    background-color:rgba(226, 238, 254, 0.6);
+    width: 50%; height:75vh;
+    margin: 0 auto;
+    text-align: center;
     display: none;
-}
-main #project_design_detail .popup_contents li .contents1 .popup1 {
-    width: 23%;
-    
+    overflow-y: auto;
     
 }
-main #project_design_detail .popup_contents li .contents1 .close1 {
+#wrap #project_design_detail .popup_contents li .contents1 .popup1 {
+    width: 100%; 
+    
+    
+    
+}
+#wrap #project_design_detail .popup_contents li .close1 {
     width: 35px;
     cursor: pointer;
-    
-}
-main #project_design_detail .popup_contents li .contents2 {
+    z-index: 999;
     position: absolute;
-    left:0%; top:0%;
-    z-index: 300;
-    background-color: #f1f1f1;
-    width: 100%; height:100vh;
-    display: none;
+    top:11%; right:25%;
+    display:none;
 }
-main #project_design_detail .popup_contents li .contents2 .popup2 {
-    width: 23%;
+#wrap #project_design_detail .popup_contents li .contents2 {
+    position: absolute;
+    left:25%; top:15%;
+    z-index: 300;
+    background-color:rgba(226, 238, 254, 0.6);
+    width: 50%; height:75vh;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    overflow-y: auto;
+}
+#wrap #project_design_detail .popup_contents li .contents2 .popup2 {
+    width: 100%;
     
 }
-main #project_design_detail .popup_contents li .contents2 .close2 {
+#wrap #project_design_detail .popup_contents li .close2 {
     width: 35px;
     cursor: pointer;
-    
-}
-main #project_design_detail .popup_contents li .contents3 {
+    z-index: 999;
     position: absolute;
-    left:0%; top:0%;
-    z-index: 300;
-    background-color: #f1f1f1;
-    width: 100%; height:100vh;
-    display: none;
-}
-main #project_design_detail .popup_contents li .contents3 .popup3 {
-    width: 23%;
+    top:11%; right:25%;
+    display:none;
     
 }
-main #project_design_detail .popup_contents li .contents3 .close3 {
+#wrap #project_design_detail .popup_contents li .contents3 {
+    position: absolute;
+    left:25%; top:15%;
+    z-index: 300;
+    background-color:rgba(226, 238, 254, 0.6);
+    width: 50%; height:75vh;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    overflow-y: auto;
+}
+#wrap #project_design_detail .popup_contents li .contents3 .popup3 {
+    width: 100%;
+    
+}
+#wrap #project_design_detail .popup_contents li .close3 {
     width: 35px;
     cursor: pointer;
-    
-}
-main #project_design_detail .popup_contents li .contents4 {
+    z-index: 999;
     position: absolute;
-    left:0%; top:0%;
-    z-index: 300;
-    background-color: #f1f1f1;
-    width: 100%; height:100vh;
-    display: none;
-}
-main #project_design_detail .popup_contents li .contents4 .popup4 {
-    width: 23%;
+    top:11%; right:25%;
+    display:none;
     
 }
-main #project_design_detail .popup_contents li .contents4 .close4 {
+#wrap #project_design_detail .popup_contents li .contents4 {
+    position: absolute;
+    left:25%; top:15%;
+    z-index: 300;
+    background-color:rgba(226, 238, 254, 0.6);
+    width: 50%; height:75vh;
+    margin: 0 auto;
+    text-align: center;
+    display: none;
+    overflow-y: auto;
+}
+#wrap #project_design_detail .popup_contents li .contents4 .popup4 {
+    width: 100%;
+    
+}
+#wrap #project_design_detail .popup_contents li .close4 {
     width: 35px;
     cursor: pointer;
+    z-index: 999;
+    position: absolute;
+    top:11%; right:25%;
+    display:none;
     
 }
 
-main #project_design_detail .domain {
-    margin: 50px 0 0 50px;
+#wrap #project_design_detail .domain {
+    margin: 20px 0 0 50px;
     
 }
-main #project_design_detail .domain a {
+#wrap #project_design_detail .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #project_design_detail .domain a:hover {
+#wrap #project_design_detail .domain a:hover {
     color: #000;
     transition: all 0.5s;
 }
 
 /* project_design_sns */
-main #project_design_sns {
-    height:100vh;
+#wrap #project_design_sns {
+    height:90vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 70px 0 50px 0;
+    padding: 30px 0 20px 0;
     position: relative;
     
 }
-main #project_design_sns h1 {
+#wrap #project_design_sns h1 {
     font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
 }
-main #project_design_sns h2 {
+#wrap #project_design_sns h2 {
     font-size: 2.5rem; text-align: center;
     letter-spacing: -0.02em; font-weight: 700;
     margin-top: 10px;
 }
-main #project_design_sns .sns_contents {
+#wrap #project_design_sns .sns_contents {
     display: flex; flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
-    width: calc(100% - 80px);
+    width: 1300px;
     margin: 0 auto;
-    padding-top: 20px;
+    padding-top: 30px;
     z-index: 100;
 }
-main #project_design_sns .sns_contents li {
-    margin-right: 35px;
+#wrap #project_design_sns .sns_contents li {
+    margin-right: 10px;
     overflow: hidden;
-    width: 23%;
-    height:35vh;
+    width: 300px; height:300px;
     margin-bottom: 20px;
 }
-main #project_design_sns .sns_contents li:nth-of-type(4),main #project_design_sns .sns_contents li:nth-of-type(8) {
+#wrap #project_design_sns .sns_contents li:nth-of-type(4),#wrap #project_design_sns .sns_contents li:nth-of-type(8) {
     margin-right: 0;
 }
-main #project_design_sns .sns_contents li .sns1:hover img {
+#wrap #project_design_sns .sns_contents li .sns1:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    
+    filter: grayscale(100%)
 }
 
-main #project_design_sns .sns_contents li .sns1 img {
+#wrap #project_design_sns .sns_contents li .sns1 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns2:hover img {
+#wrap #project_design_sns .sns_contents li .sns2:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns2 img {
+#wrap #project_design_sns .sns_contents li .sns2 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns3:hover img {
+#wrap #project_design_sns .sns_contents li .sns3:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns3 img {
+#wrap #project_design_sns .sns_contents li .sns3 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns4:hover img {
+#wrap #project_design_sns .sns_contents li .sns4:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns4 img {
+#wrap #project_design_sns .sns_contents li .sns4 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns5:hover img {
+#wrap #project_design_sns .sns_contents li .sns5:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns5 img {
+#wrap #project_design_sns .sns_contents li .sns5 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns6:hover img {
+#wrap #project_design_sns .sns_contents li .sns6:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns6 img {
+#wrap #project_design_sns .sns_contents li .sns6 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns7:hover img {
+#wrap #project_design_sns .sns_contents li .sns7:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns7 img {
+#wrap #project_design_sns .sns_contents li .sns7 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_contents li .sns8:hover img {
+#wrap #project_design_sns .sns_contents li .sns8:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
-main #project_design_sns .sns_contents li .sns8 img {
+#wrap #project_design_sns .sns_contents li .sns8 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(0%)
 }
-main #project_design_sns .sns_popup {}
-main #project_design_sns .sns_popup li {
+#wrap #project_design_sns .sns_popup {}
+#wrap #project_design_sns .sns_popup li {
     width: 100%; text-align: center;
     margin: 0 auto;
 }
-main #project_design_sns .sns_popup li .sns_popup1 {
+#wrap #project_design_sns .sns_popup li .sns_popup1 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -935,13 +1041,13 @@ main #project_design_sns .sns_popup li .sns_popup1 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup1{}
+#wrap #project_design_sns .sns_popup li .sns_popup1{}
 
-main #project_design_sns .sns_popup li .sns_popup1 .sns_close1 {
+#wrap #project_design_sns .sns_popup li .sns_popup1 .sns_close1 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup2 {
+#wrap #project_design_sns .sns_popup li .sns_popup2 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -949,12 +1055,12 @@ main #project_design_sns .sns_popup li .sns_popup2 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup2 img {}
-main #project_design_sns .sns_popup li .sns_popup2 .sns_close2 {
+#wrap #project_design_sns .sns_popup li .sns_popup2 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup2 .sns_close2 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup3 {
+#wrap #project_design_sns .sns_popup li .sns_popup3 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -962,12 +1068,12 @@ main #project_design_sns .sns_popup li .sns_popup3 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup3 img {}
-main #project_design_sns .sns_popup li .sns_popup3 .sns_close3 {
+#wrap #project_design_sns .sns_popup li .sns_popup3 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup3 .sns_close3 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup4 {
+#wrap #project_design_sns .sns_popup li .sns_popup4 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -975,12 +1081,12 @@ main #project_design_sns .sns_popup li .sns_popup4 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup4 img {}
-main #project_design_sns .sns_popup li .sns_popup4 .sns_close4 {
+#wrap #project_design_sns .sns_popup li .sns_popup4 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup4 .sns_close4 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup5 {
+#wrap #project_design_sns .sns_popup li .sns_popup5 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -988,12 +1094,12 @@ main #project_design_sns .sns_popup li .sns_popup5 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup5 img {}
-main #project_design_sns .sns_popup li .sns_popup5 .sns_close5 {
+#wrap #project_design_sns .sns_popup li .sns_popup5 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup5 .sns_close5 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup6 {
+#wrap #project_design_sns .sns_popup li .sns_popup6 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -1001,12 +1107,12 @@ main #project_design_sns .sns_popup li .sns_popup6 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup6 img {}
-main #project_design_sns .sns_popup li .sns_popup6 .sns_close6 {
+#wrap #project_design_sns .sns_popup li .sns_popup6 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup6 .sns_close6 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup7 {
+#wrap #project_design_sns .sns_popup li .sns_popup7 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -1014,12 +1120,12 @@ main #project_design_sns .sns_popup li .sns_popup7 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup7 img {}
-main #project_design_sns .sns_popup li .sns_popup7 .sns_close7 {
+#wrap #project_design_sns .sns_popup li .sns_popup7 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup7 .sns_close7 {
     width: 35px;
     cursor: pointer;
 }
-main #project_design_sns .sns_popup li .sns_popup8 {
+#wrap #project_design_sns .sns_popup li .sns_popup8 {
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
@@ -1027,71 +1133,74 @@ main #project_design_sns .sns_popup li .sns_popup8 {
     width: 100%; height: 100vh;
     display: none;
 }
-main #project_design_sns .sns_popup li .sns_popup8 img {}
-main #project_design_sns .sns_popup li .sns_popup8 .sns_close8 {
+#wrap #project_design_sns .sns_popup li .sns_popup8 img {}
+#wrap #project_design_sns .sns_popup li .sns_popup8 .sns_close8 {
     width: 35px;
     cursor: pointer;
 }
 
-main #project_design_sns .domain {
-    margin: 10px 0 0 10px;
+#wrap #project_design_sns .domain {
+    margin: 10px 0 0 30px;
 }
-main #project_design_sns .domain a {
+#wrap #project_design_sns .domain a {
     font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #project_design_sns .domain a:hover {
+#wrap #project_design_sns .domain a:hover {
     color: #000;
     transition: all 0.5s;
 }
 
 /* ending */
-main #ending {
-    height:100vh;
+#wrap #ending {
+    height:70vh;
     background: url(../images/bl2.jpg)no-repeat center;
     background-size: cover;
-    padding: 100px 0 50px 0;
+    padding: 10px 0 10px 0;
+    position: relative;
 }
-main #ending > p {
+#wrap #ending h2 {
     text-align: right;
-    font-size: 2.18rem;
-    margin-right: 40px;
+    font-size: 1.5rem;
     color: #fff;
+    position: absolute;
+    right:5%; top:13%;
 }
-main #ending h1 {
-    margin: 100px 0 0 100px;
+#wrap #ending h1 {
+    margin: 150px 0 0 100px;
     font-size: 6.25rem;
 }
-main #ending em {
+#wrap #ending em {
     text-align: right;
     margin-right: 500px; margin-top: 30px;
     font-size: 6.25rem;
     display: block;
 }
-main #ending > span {
+#wrap #ending .thank {
     display: block;
     text-align: center;
-    font-size: 3.12rem;
-    margin-top: 100px; margin-bottom: 250px;
+    font-size: 1.75rem;
+    margin-top: 150px; margin-bottom: 150px;
 }
-main #ending .bottom {
+#wrap #ending .bottom {
     width: calc(100% - 100px);
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
+    align-items: center;
     
 }
-main #ending .bottom .domain {}
-main #ending .bottom .domain a {
-    font-size: 2.18rem; font-weight: 500;
+#wrap #ending .bottom .domain {}
+#wrap #ending .bottom .domain a {
+    font-size: 1.5rem; font-weight: 500;
     color: #fff;
     transition: all 0.5s;
 }
-main #ending .bottom .domain a:hover {
+#wrap #ending .bottom .domain a:hover {
     color: #000;
     transition: all 0.5s;
 }
-main #ending .bottom span {
-    font-size: 2.18rem;
+#wrap #ending .bottom > span {
+    font-size: 1.5rem;
 }
