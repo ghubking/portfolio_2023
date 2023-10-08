@@ -141,18 +141,19 @@ header nav .sns_address span {font-size: 1.25rem; margin-right: 5px;}
     cursor: pointer;
     
 }
-main #profile .profile_container .profile_left .left_top .keypoint:hover img {
+#wrap #profile .profile_container .profile_left .left_top .keypoint:hover .small {
     transform: scale(0.98);
     transition: all 0.5s;
 }
-#wrap #profile .profile_container .profile_left .left_top .keypoint img {
+#wrap #profile .profile_container .profile_left .left_top .keypoint .small {
     width: 100px; height:100px;
     transition: all 0.5s;
+    animation:key_move 1s linear alternate infinite;
 }
 #wrap #profile .profile_container .profile_left .left_top .keypoint p {
     transition: all 0.5s;
 }
-main #profile .profile_container .profile_left .left_top .keypoint:hover p {
+#wrap #profile .profile_container .profile_left .left_top .keypoint:hover p {
     color:#FD790D;
     transition: all 0.5s;
 }
@@ -213,6 +214,12 @@ main #profile .profile_container .profile_left .left_top .keypoint:hover p {
 #wrap #profile .domain a:hover {
     color: #FD790D;
     transition: all 0.5s;
+}
+
+
+@keyframes key_move {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-10px);}
 }
 
 /* side menu */
@@ -387,13 +394,13 @@ main #proflie .snb ul li .down_btn img {}
     
 }
 #wrap #project_web1 div .web1_text .link a:nth-of-type(4) {
-    background-color: #aaa;
+    background-color: #555;
     
 }
 #wrap #project_web1 div .web1_text .project_info {
     margin: 0 auto; 
-    
     text-align: center;
+    
 }
 #wrap #project_web1 div .web1_text .project_info p {
     line-height: 50px; text-align: left;
@@ -401,6 +408,13 @@ main #proflie .snb ul li .down_btn img {}
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 0px;
+}
+#wrap #project_web1 div .web1_text .using_img {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+#wrap #project_web1 div .web1_text .using_img img {
+    margin-right: 20px;
 }
 #wrap #project_web1 div .preview {
     text-align: center;
@@ -483,7 +497,7 @@ main #proflie .snb ul li .down_btn img {}
     
 }
 #wrap #project_web2 div .web2_text .link a:nth-of-type(4) {
-    background-color: #aaa;
+    background-color: #555;
     
 }
 #wrap #project_web2 div .web2_text .project_info {
@@ -497,6 +511,13 @@ main #proflie .snb ul li .down_btn img {}
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
     margin-left: 0px;
+}
+#wrap #project_web2 div .web2_text .using_img {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+}
+#wrap #project_web2 div .web2_text .using_img img {
+    margin-right: 20px;
 }
 #wrap #project_web2 div .preview {
     text-align: center;
@@ -534,34 +555,36 @@ main #proflie .snb ul li .down_btn img {}
     padding: 20px 0 20px 0;
     position: relative;
 }
-#wrap #project_landing1 div {
+#wrap #project_landing1 .landing1_wrap {
     
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     margin-left: 30px;
 }
-#wrap #project_landing1 div .landing1_text {
+#wrap #project_landing1 .landing1_wrap .landing1_text {
     width: 65%;
     display: flex; flex-flow: column wrap;
     align-items: flex-start;
     margin-left: 0px;
+    padding-bottom: 50px;
 }
-#wrap #project_landing1 div .landing1_text h1 {
+#wrap #project_landing1 .landing1_wrap .landing1_text h1 {
     font-size: 2.5rem; text-align: left;
     letter-spacing: -0.02em; font-weight: 700;
     padding: 150px 0 10px 0;
     margin-left: 40px;
 }
-#wrap #project_landing1 div .landing1_text .link {
+#wrap #project_landing1 .landing1_wrap .landing1_text .link {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-start;
     padding-top: 20px; margin-bottom: 20px;
+    margin-left: 30px;
 }
-#wrap #project_landing1 div .landing1_text .link a {
+#wrap #project_landing1 .landing1_wrap .landing1_text .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
@@ -570,30 +593,39 @@ main #proflie .snb ul li .down_btn img {}
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
 }
-#wrap #project_landing1 div .landing1_text .link a:hover {
+#wrap #project_landing1 .landing1_wrap .landing1_text .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-#wrap #project_landing1 div .landing1_text .link a:first-child {
+#wrap #project_landing1 .landing1_wrap .landing1_text .link a:first-child {
     background-color: #FD790D;
 }
-#wrap #project_landing1 div .landing1_text .project_info {
+#wrap #project_landing1 .landing1_wrap .landing1_text .project_info {
     /* margin: 0 auto;  */
     
     text-align: left;
 }
-#wrap #project_landing1 div .landing1_text .project_info p {
+#wrap #project_landing1 .landing1_wrap .landing1_text .project_info p {
     line-height: 50px; text-align: left;
     font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
 }
-#wrap #project_landing1 div .preview {
+#wrap #project_landing1 .landing1_wrap .landing1_text .using_img {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+#wrap #project_landing1 .landing1_wrap .landing1_text .using_img img {
+    margin-right: 20px;
+}
+#wrap #project_landing1 .landing1_wrap .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-#wrap #project_landing1 div .preview img {
+#wrap #project_landing1 .landing1_wrap .preview img {
     width: 100%;
     border-radius: 30px;
 }
@@ -622,34 +654,36 @@ main #proflie .snb ul li .down_btn img {}
     padding: 20px 0 20px 0;
     position: relative;
 }
-#wrap #project_landing2 div {
+#wrap #project_landing2 .landing2_wrap {
     
     margin: 0 auto;
     display: flex; flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 30px;
-    margin-bottom: 70px;
+    margin-bottom: 150px;
     margin-left: 30px;
 }
-#wrap #project_landing2 div .landing2_text2 {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 {
     width: 65%;
     display: flex; flex-flow: column wrap;
     align-items: flex-start;
     margin-left: 0px;
+    padding-bottom: 100px;
 }
-#wrap #project_landing2 div .landing2_text2 h1 {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 h1 {
     font-size: 2.5rem; text-align: left;
     letter-spacing: -0.02em; font-weight: 700;
     padding: 150px 0 10px 0;
     margin-left: 40px;
 }
-#wrap #project_landing2 div .landing2_text2 .link {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .link {
     display: flex; flex-flow: row nowrap;
     justify-content: flex-start;
     padding-top: 20px; margin-bottom: 20px;
+    margin-left: 30px;
 }
-#wrap #project_landing2 div .landing2_text2 .link a {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .link a {
     padding: 20px 30px;
     background: #222; color:#fff;
     border-radius: 10px; margin-left: 10px;
@@ -658,30 +692,39 @@ main #proflie .snb ul li .down_btn img {}
     font-family: 'Noto Sans KR', sans-serif;
     transition: all 0.5s;
 }
-#wrap #project_landing2 div .landing2_text2 .link a:hover {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .link a:hover {
     transform: scale(0.95);
     transition: all 0.5s;
 }
-#wrap #project_landing2 div .landing2_text2 .link a:first-child {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .link a:first-child {
     background-color: #FD790D;
 }
-#wrap #project_landing2 div .landing2_text2 .project_info {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .project_info {
     /* margin: 0 auto;  */
     
     text-align: left;
 }
-#wrap #project_landing2 div .landing2_text2 .project_info p {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .project_info p {
     line-height: 50px; text-align: left;
     font-size: 1.4rem; font-weight: 500;
     letter-spacing: -0.02em;
     font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
 }
-#wrap #project_landing2 div .preview {
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .using_img {
+    display: flex; flex-flow: row nowrap;
+    justify-content: flex-start;
+    margin-left: 40px;
+}
+#wrap #project_landing2 .landing2_wrap .landing2_text2 .using_img img {
+    margin-right: 20px;
+}
+#wrap #project_landing2 .landing2_wrap .preview {
     text-align: center;
     width: 50%; margin-top: 150px;
 }
-#wrap #project_landing2 div .preview img {
+#wrap #project_landing2 .landing2_wrap .preview img {
     width: 100%;
     border-radius: 30px;
 }
