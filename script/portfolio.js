@@ -55,7 +55,27 @@ $('.close4').on('click',function(){
     $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
 })
 
-
+// 확대이미지 누르면 팝업닫기
+$('.popup1').on('click',function(){
+    $('.contents1').hide();
+    $('.close1').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.popup2').on('click',function(){
+    $('.contents2').hide();
+    $('.close2').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.popup3').on('click',function(){
+    $('.contents3').hide();
+    $('.close3').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.popup4').on('click',function(){
+    $('.contents4').hide();
+    $('.close4').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
 
 
 
@@ -184,11 +204,39 @@ $(window).scroll(function() {
 
 $('#wrap').fullpage({
     scrollBar:true, //스크롤바 표시유무 true/flase
-    scrollingSpeed:700, //스크롤 속도
+    scrollingSpeed:100, //스크롤 속도
     // menu:'.gnb',
     // anchors:['home','profile','project_web1','project_landing1','project_design_detail'],
     
     navigation:true, //우측 네비게이션 유무
-    navigationTooltips:['Home','Profile','Skills','Progect-Web1', 'Progect-Web2', 'Landing1', 'Landing2', 'Design-Detail', 'Design-sns', 'end'],
+    navigationTooltips:['Home','Profile','Skills','Progect-Web1', 'Progect-Web2', 'Landing1', 'Landing2', 'Design-Detail', 'Design-sns', 'End'],
     showActiveTooltip:true,
 })
+
+
+// 자바스크립트의 스크롤 제어
+const tabBtn = document.querySelectorAll('.tab')
+const section = document.querySelectorAll('.section')
+console.log(tabBtn, section)  // 3 3
+
+// 리뷰 클릭 시 리뷰 section 으로 이동하기
+        tabBtn[0].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[0].offsetTop)
+        })
+        tabBtn[1].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[1].offsetTop)
+        })
+        tabBtn[2].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[3].offsetTop)
+        })
+        tabBtn[3].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[5].offsetTop)
+        })
+        tabBtn[4].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[7].offsetTop)
+        })
