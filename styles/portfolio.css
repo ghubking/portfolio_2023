@@ -26,10 +26,11 @@ header {min-width: 1920px;
     position:fixed; left:0; top:0;
     width:100%; z-index: 200;
     padding: 33px 30px 0 30px;
+    
 }
 header nav {
-    border-top: 1px solid#000;
-    border-bottom: 5px solid#000;
+    /* border-top: 1px solid#fff;
+    border-bottom: 5px solid#fff; */
     padding:10px;
     display: flex;
     justify-content: space-between;
@@ -40,6 +41,7 @@ header nav .gnb a {
     margin-right: 50px;
     font-size: 1.25rem;
     transition: all 0.5s;
+    color:#fff;
 }
 header.active {
     background-color: #000;
@@ -61,7 +63,7 @@ header nav .sns_address {
     align-items: center;
     padding-top: 5px;
 }
-header nav .sns_address span {font-size: 1.25rem; margin-right: 5px;}
+header nav .sns_address span {font-size: 1.25rem; margin-right: 5px;color:#fff;}
 
 /* home */
 #wrap {
@@ -70,7 +72,7 @@ header nav .sns_address span {font-size: 1.25rem; margin-right: 5px;}
 #wrap > * {padding:0 30px;}
 #wrap .home {
     height:70vh;
-    background: url(../images/bl2.jpg) no-repeat center;
+    background: url(../images/main1.jpg) no-repeat center;
     background-size: cover;
 }
 #wrap .home h1 {
