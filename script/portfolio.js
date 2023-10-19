@@ -269,27 +269,99 @@ $('#wrap').fullpage({
 
 // 자바스크립트의 스크롤 제어
 const tabBtn = document.querySelectorAll('.tab')
+const subBtn = document.querySelectorAll('.subbtn')
 const section = document.querySelectorAll('.section')
-console.log(tabBtn, section)  // 3 3
+console.log(tabBtn, subBtn, section)  // 3 3
 
-// 리뷰 클릭 시 리뷰 section 으로 이동하기
-        tabBtn[0].addEventListener('click',function(e){
-            e.preventDefault();
-            window.scrollTo(0, section[0].offsetTop)
-        })
-        tabBtn[1].addEventListener('click',function(e){
+// nav 클릭 시 nav section 으로 이동하기
+        subBtn[0].addEventListener('click',function(e){
             e.preventDefault();
             window.scrollTo(0, section[1].offsetTop)
         })
-        tabBtn[2].addEventListener('click',function(e){
+        subBtn[1].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[2].offsetTop)
+        })
+        subBtn[2].addEventListener('click',function(e){
             e.preventDefault();
             window.scrollTo(0, section[3].offsetTop)
         })
-        tabBtn[3].addEventListener('click',function(e){
+        subBtn[3].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[4].offsetTop)
+        })
+        subBtn[4].addEventListener('click',function(e){
             e.preventDefault();
             window.scrollTo(0, section[5].offsetTop)
         })
-        tabBtn[4].addEventListener('click',function(e){
+        subBtn[5].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[6].offsetTop)
+        })
+        subBtn[6].addEventListener('click',function(e){
             e.preventDefault();
             window.scrollTo(0, section[7].offsetTop)
         })
+        subBtn[7].addEventListener('click',function(e){
+            e.preventDefault();
+            window.scrollTo(0, section[8].offsetTop)
+        })
+
+// sub 클릭 시 nav section 으로 이동하기
+    tabBtn[0].addEventListener('click',function(e){
+        e.preventDefault();
+        window.scrollTo(0, section[0].offsetTop)
+})
+    tabBtn[1].addEventListener('click',function(e){
+        e.preventDefault();
+        window.scrollTo(0, section[1].offsetTop)
+})
+    tabBtn[2].addEventListener('click',function(e){
+        e.preventDefault();
+        window.scrollTo(0, section[3].offsetTop)
+})
+    tabBtn[3].addEventListener('click',function(e){
+        e.preventDefault();
+        window.scrollTo(0, section[5].offsetTop)
+})
+    tabBtn[4].addEventListener('click',function(e){
+        e.preventDefault();
+        window.scrollTo(0, section[7].offsetTop)
+})
+
+
+        // 서브메뉴 숨기기
+    $('.sub').hide()
+
+    // 메인 메뉴를 마우스로 올리면(mouse over) 서브 메뉴 영역이 부드럽게 
+// 나타나면서, 서브 메뉴가 보이도록 한다
+    $(".gnb > ul > li").on('mouseover',function(){
+        $(this).children(".sub").stop().slideDown(400);
+})
+// 메인 메뉴에서 마우스커서가 벗어나면(mouse out) 서브 메뉴 영역은 
+// 부드럽게 사라져야 한다.
+    $(".gnb > ul > li").on('mouseout',function(){
+        $(this).children(".sub").stop().slideUp(200);
+})
+
+// sub 클릭 시 nav section 으로 이동하기
+tabBtn[0].addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo(0, section[0].offsetTop)
+})
+tabBtn[1].addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo(0, section[1].offsetTop)
+})
+tabBtn[2].addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo(0, section[3].offsetTop)
+})
+tabBtn[3].addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo(0, section[5].offsetTop)
+})
+tabBtn[4].addEventListener('click',function(e){
+    e.preventDefault();
+    window.scrollTo(0, section[7].offsetTop)
+})
