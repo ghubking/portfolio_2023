@@ -81,64 +81,117 @@ $('.popup4').on('click',function(){
 
 
 // // sns콘텐츠 스몰이미지 클릭하면 팝업이미지 띄우기
-// $('.sns1').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup1').show();
-// })
-// $('.sns2').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup2').show();
-// })
-// $('.sns3').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup3').show();
-// })
-// $('.sns4').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup4').show();
-// })
-// $('.sns5').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup5').show();
-// })
-// $('.sns6').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup6').show();
-// })
-// $('.sns7').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup7').show();
-// })
-// $('.sns8').on('click',function(e){
-//     e.preventDefault();
-//     $('.sns_popup8').show();
-// })
+$('.sns1').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup1').show();
+    $('.sns_close1').show();
+})
+$('.sns2').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup2').show();
+    $('.sns_close2').show();
+})
+$('.sns3').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup3').show();
+    $('.sns_close3').show();
+})
+$('.sns4').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup4').show();
+    $('.sns_close4').show();
+})
+$('.sns5').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup5').show();
+    $('.sns_close5').show();
+})
+$('.sns6').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup6').show();
+    $('.sns_close6').show();
+})
+$('.sns7').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup7').show();
+    $('.sns_close7').show();
+})
+$('.sns8').on('click',function(e){
+    e.preventDefault();
+    $('.sns_popup8').show();
+    $('.sns_close8').show();
+})
+
 
 // // 클로즈버튼 누르면 팝업닫기
-// $('.sns_close1').on('click',function(){
-//     $('.sns_popup1').hide();
-// })
-// $('.sns_close2').on('click',function(){
-//     $('.sns_popup2').hide();
-// })
-// $('.sns_close3').on('click',function(){
-//     $('.sns_popup3').hide();
-// })
-// $('.sns_close4').on('click',function(){
-//     $('.sns_popup4').hide();
-// })
-// $('.sns_close5').on('click',function(){
-//     $('.sns_popup5').hide();
-// })
-// $('.sns_close6').on('click',function(){
-//     $('.sns_popup6').hide();
-// })
-// $('.sns_close7').on('click',function(){
-//     $('.sns_popup7').hide();
-// })
-// $('.sns_close8').on('click',function(){
-//     $('.sns_popup8').hide();
-// })
+$('.sns_close1').on('click',function(){
+    $('.sns_popup1').hide();
+})
+$('.sns_close2').on('click',function(){
+    $('.sns_popup2').hide();
+})
+$('.sns_close3').on('click',function(){
+    $('.sns_popup3').hide();
+})
+$('.sns_close4').on('click',function(){
+    $('.sns_popup4').hide();
+})
+$('.sns_close5').on('click',function(){
+    $('.sns_popup5').hide();
+})
+$('.sns_close6').on('click',function(){
+    $('.sns_popup6').hide();
+})
+$('.sns_close7').on('click',function(){
+    $('.sns_popup7').hide();
+})
+$('.sns_close8').on('click',function(){
+    $('.sns_popup8').hide();
+})
+
+// 확대이미지 누르면 팝업닫기
+$('.sns_popup1').on('click',function(){
+    $('.sns_popup1').hide();
+    $('.sns_close1').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup2').on('click',function(){
+    $('.sns_popup2').hide();
+    $('.sns_close1').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup3').on('click',function(){
+    $('.sns_popup3').hide();
+    $('.sns_close3').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup4').on('click',function(){
+    $('.sns_popup4').hide();
+    $('.sns_close4').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup5').on('click',function(){
+    $('.sns_popup5').hide();
+    $('.sns_close5').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup6').on('click',function(){
+    $('.sns_popup6').hide();
+    $('.sns_close6').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup7').on('click',function(){
+    $('.sns_popup7').hide();
+    $('.sns_close7').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+$('.sns_popup8').on('click',function(){
+    $('.sns_popup8').hide();
+    $('.sns_close8').hide();
+    $.fn.fullpage.setAllowScrolling(true) //풀페이지 스크롤 재개
+})
+
+
 
 
 // 헤더메뉴 마우스 스크롤시 블랙적용

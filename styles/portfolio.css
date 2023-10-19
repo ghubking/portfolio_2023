@@ -798,38 +798,46 @@ main #proflie .snb ul li .down_btn img {}
 #wrap .project_design_detail .detail_contents li .detail1:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(0%)
 }
 #wrap .project_design_detail .detail_contents li .detail1 img {
     height: 100%; width: 100%;
     border-radius: 20px;
     transition: all 0.5s;
+    filter: grayscale(100%)
 }
 #wrap .project_design_detail .detail_contents li .detail2:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(0%)
 }
 #wrap .project_design_detail .detail_contents li .detail2 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(100%)
 }
 #wrap .project_design_detail .detail_contents li .detail3:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(0%)
 }
 #wrap .project_design_detail .detail_contents li .detail3 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(100%)
 }
 #wrap .project_design_detail .detail_contents li .detail4:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
+    filter: grayscale(0%)
 }
 #wrap .project_design_detail .detail_contents li .detail4 img {
     height: 100%; width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
+    filter: grayscale(100%)
 }
 
 #wrap .project_design_detail .popup_contents {}
@@ -980,7 +988,7 @@ main #proflie .snb ul li .down_btn img {}
     z-index: 100;
 }
 #wrap .project_design_sns .sns_contents li {
-    margin-right: 10px;
+    margin-right: 0px;
     overflow: hidden;
     width: 300px; height:300px;
     margin-bottom: 20px;
@@ -991,91 +999,91 @@ main #proflie .snb ul li .down_btn img {}
 #wrap .project_design_sns .sns_contents li .sns1:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 
 #wrap .project_design_sns .sns_contents li .sns1 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns2:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns2 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns3:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns3 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns4:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns4 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns5:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns5 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns6:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns6 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns7:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns7 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_contents li .sns8:hover img {
     transform: scale(1.02);
     transition: all 0.5s;
-    filter: grayscale(100%)
+    filter: grayscale(0%)
 }
 #wrap .project_design_sns .sns_contents li .sns8 img {
     width: 100%;
     transition: all 0.5s;
     border-radius: 20px;
-    filter: grayscale(0%)
+    filter: grayscale(100%)
 }
 #wrap .project_design_sns .sns_popup {}
 #wrap .project_design_sns .sns_popup li {
@@ -1086,11 +1094,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup1{}
+#wrap .project_design_sns .sns_popup li .sns_popup1 img {
+    width: 45%;
+    margin-top: 50px;
+}
 
 #wrap .project_design_sns .sns_popup li .sns_popup1 .sns_close1 {
     width: 35px;
@@ -1100,11 +1111,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup2 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup2 img {
+    width: 44%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup2 .sns_close2 {
     width: 35px;
     cursor: pointer;
@@ -1113,11 +1127,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup3 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup3 img {
+    width: 45%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup3 .sns_close3 {
     width: 35px;
     cursor: pointer;
@@ -1126,11 +1143,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup4 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup4 img {
+    width: 44%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup4 .sns_close4 {
     width: 35px;
     cursor: pointer;
@@ -1139,11 +1159,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup5 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup5 img {
+    width: 44%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup5 .sns_close5 {
     width: 35px;
     cursor: pointer;
@@ -1152,11 +1175,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup6 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup6 img {
+    width: 44%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup6 .sns_close6 {
     width: 35px;
     cursor: pointer;
@@ -1165,11 +1191,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup7 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup7 img {
+    width: 44%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup7 .sns_close7 {
     width: 35px;
     cursor: pointer;
@@ -1178,11 +1207,14 @@ main #proflie .snb ul li .down_btn img {}
     position: absolute;
     left:0%; top:0%;
     z-index: 300;
-    background-color: #f1f1f1;
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%; height: 100vh;
     display: none;
 }
-#wrap .project_design_sns .sns_popup li .sns_popup8 img {}
+#wrap .project_design_sns .sns_popup li .sns_popup8 img {
+    width: 44%;
+    margin-top: 50px;
+}
 #wrap .project_design_sns .sns_popup li .sns_popup8 .sns_close8 {
     width: 35px;
     cursor: pointer;
